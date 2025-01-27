@@ -31,7 +31,7 @@
 
       <!--//* WHATSAPP -->
       <q-fab-action
-      	@click="onClickButton('https://wa.me/5585991207733', '_blank')"
+      	@click="onClickButton('https://wa.me/5585994201310', '_blank')"
       	color="none"
         class="q-pa-none"
       >

@@ -49,7 +49,7 @@
 
 
 
-      <div class="text-h5 text-bold full-width text-center q-pt-xl">
+      <!-- <div class="text-h5 text-bold full-width text-center q-pt-xl">
         Convênios
       </div>
 
@@ -203,7 +203,7 @@
 
       <div>
         Destacamos ainda que estes benefícios não interferem nos serviços prestados pelo PSINDCE no que diz respeito a acordos ou negociações coletivas, serviços de revisão contábil para homologações e ações coletivas na Justiça. Para esses casos, os profissionais de psicologia podem contar com as nossas assessorias jurídica e contábil.
-      </div>
+      </div> -->
 
       <div class="text-bold">
         Cartão do Associado PSINDCE

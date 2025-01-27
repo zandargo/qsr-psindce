@@ -61,60 +61,203 @@
 
 
 
-        <div class="full-width text-bold q-mb-lg">DIRETORIA ATUAL</div>
+        <!-- <div class="full-width text-bold q-mb-lg">DIRETORIA ATUAL</div> -->
 
         <table class="full-width">
           <tbody>
+
             <tr>
-              <th>Diretor(a)</th>
-              <th>Coordenação</th>
-            </tr>
-            <tr>
-              <td>Fulvio Robert</td>
-              <td>Coordenação Geral</td>
-            </tr>
-            <tr>
-              <td>Rodrigo Meireles</td>
-              <td>Coordenação de Comunicação e Imprensa</td>
-            </tr>
-            <tr>
-              <td>Meire Viana</td>
-              <td>Coordenação Administrativo-Financeira</td>
-            </tr>
-            <tr>
-              <td>Juliemary Peixoto</td>
-              <td>Coordenação de Formação e Cultura</td>
-            </tr>
-            <tr>
-              <td>Simone Soares de Castro</td>
-              <td>Coordenação de Políticas Sindicais e de Saúde
+              <td colspan="3" class="text-bold">
+                <div class="q-mb-md">
+                  DIRETORIA ATUAL
+                </div>
               </td>
             </tr>
-            <tr class="q-pb-md">
+
+            <tr>
+              <td>
+                <div class="td1">Claudemi Campos</div>
+                <div class="td2">(CRP 11/14061)</div>
+              </td>
+              <td>
+                <div class="td1">Coordenação Geral</div>
+                <div class="td2">&nbsp;</div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="td1">Fernando Pinto</div>
+                <div class="td2">(CRP 11/11607)</div>
+              </td>
+              <td>
+                <div class="td1">Coordenação Administrativa</div>
+                <div class="td2">&nbsp;</div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="td1">Karen Crisostomo</div>
+                <div class="td2">(CRP 11/13272)</div>
+              </td>
+              <td>
+                <div class="td1">Coordenação de Comunicação</div>
+                <div class="td2">&nbsp;</div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="td1">Jannayna Queiroz</div>
+                <div class="td2">(CRP 11/05087)</div>
+              </td>
+              <td>
+                <div class="td1">Coordenação de Formação</div>
+                <div class="td2">&nbsp;</div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="td1">Jorge Luiz</div>
+                <div class="td2">(CRP 11/08046)</div>
+              </td>
+              <td>
+                <div class="td1">Coordenação de Políticas</div>
+                <div class="td2">&nbsp;</div>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2">&nbsp;</td>
+            </tr>
+
+            <tr>
+              <td colspan="2" class="text-bold">
+                <div class="q-mb-md">
+                  ADJUNTOS E ADJUNTAS
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="td1">Helena Oliveira</div>
+                <div class="td2">(CRP 11/14909)</div>
+              </td>
+              <td>
+                <div class="td1">Coordenação Geral</div>
+                <div class="td2">&nbsp;</div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="td1">Rozelir Lima</div>
+                <div class="td2">(CRP 11/18978)</div>
+              </td>
+              <td>
+                <div class="td1">Coordenação Administrativa</div>
+                <div class="td2">&nbsp;</div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="td1">Elisângela Chagas</div>
+                <div class="td2">(CRP 11/10712)</div>
+              </td>
+              <td>
+                <div class="td1">Coordenação de Comunicação</div>
+                <div class="td2">&nbsp;</div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="td1">Gisele Peixoto</div>
+                <div class="td2">(CRP 11/2194)</div>
+              </td>
+              <td>
+                <div class="td1">Coordenação de Formação</div>
+                <div class="td2">&nbsp;</div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="td1">Walesson Castro</div>
+                <div class="td2">(CRP 11/13625)</div>
+              </td>
+              <td>
+                <div class="td1">Coordenação de Políticas Públicas</div>
+                <div class="td2">&nbsp;</div>
+              </td>
+            </tr>
+
+
+
+            <tr>
               <td colspan="2">&nbsp;</td>
             </tr>
             <tr>
-              <td>Israu Lima</td>
-              <td>Diretor Adjunto</td>
+              <td colspan="2" class="text-bold">
+                <div class="q-mb-md">
+                  CONSELHO FISCAL
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="td1">Meire Viana</div>
+                <div class="td2">(CRP 11/00919)</div>
+              </td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="td1">Ivan Nogueira</div>
+                <div class="td2">(CRP 11/15086)</div>
+              </td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="td1">Fúlvio Robert</div>
+                <div class="td2">(CRP 11/03494)</div>
+              </td>
+              <td></td>
+            </tr>
+
+
+
+            <tr>
+              <td colspan="2">&nbsp;</td>
             </tr>
             <tr>
-              <td>Ariadyne Luz</td>
-              <td>Diretora Adjunta</td>
+              <td colspan="2" class="text-bold">
+                <div class="q-mb-md">
+                  SUPLENTE
+                </div>
+              </td>
             </tr>
             <tr>
-              <td>Diana Pinheiro</td>
-              <td>Diretora Adjunta</td>
+              <td>
+                <div class="td1">Priscila Araújo</div>
+                <div class="td2">(CRP 11/07998)</div>
+              </td>
+              <td></td>
             </tr>
-            <tr>
-              <td>Maria de Fátima Vidal</td>
-              <td>Diretora Adjunta</td>
-            </tr>
-            <tr>
-              <td>Rita de Cássia Mendes</td>
-              <td>Diretora Adjunta</td>
-            </tr>
+
+
+
           </tbody>
         </table>
+
       </div>
 
 
@@ -137,8 +280,18 @@
 </script>
 
 <style lang="scss">
-.text-shadow1 {
-  text-shadow: none;
-  // text-shadow: 1px 1px 2px #0003;
-}
+  .text-shadow1 {
+    text-shadow: none;
+    // text-shadow: 1px 1px 2px #0003;
+  }
+
+  .td1 {
+    line-height: .5em;
+  }
+
+  .td2 {
+    font-size: small;
+    line-height: 1.75em;
+    margin-bottom: 10px;
+  }
 </style>

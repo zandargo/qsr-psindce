@@ -28,19 +28,13 @@
             <q-tab name="historia" label="História" />
             <q-tab name="sindicalize" label="Sindicalize-se!" />
           </q-tabs> -->
-          <q-tabs
-          	dense
-          	class="text-green-13"
-          	indicator-color="white"
-          	active-class="text-white"
-          	align="justify"
-          >
-          	<!-- narrow-indicator -->
+          <q-tabs dense class="text-green-13" indicator-color="white" active-class="text-white" align="justify">
+            <!-- narrow-indicator -->
             <!-- active-bg-color="red-2" -->
-            <q-route-tab label="Início"          to="/"        />
-            <q-route-tab label="Sobre"           to="/sobre"   />
-            <q-route-tab label="História"        to="/historia"/>
-            <q-route-tab label="Sindicalize-se!" to="/afiliese"/>
+            <q-route-tab label="Início" to="/" />
+            <q-route-tab label="Sobre" to="/sobre" />
+            <q-route-tab label="História" to="/historia" />
+            <q-route-tab label="Sindicalize-se!" to="/afiliese" />
           </q-tabs>
 
           <!-- <div>Quasar v{{ $q.version }}</div> -->
@@ -57,7 +51,7 @@
         </q-list>
       </q-drawer>
 
-      <q-page-container class="bg-teal-1">
+      <q-page-container class="bg-image 6bg-teal-1">
         <router-view />
       </q-page-container>
     </q-layout>
@@ -132,8 +126,8 @@
     //     color.adjust($dark, $alpha: -1.0) 99%,
     //   );
     background: linear-gradient(180deg,
-        color.adjust($teal-9, $alpha: -0.1, $whiteness: 10% ) 0%,
-        color.adjust($teal-9, $alpha: -0.1, $blackness: 10% ) 80%,
+        color.adjust($teal-9, $alpha: -0.1, $whiteness: 10%) 0%,
+        color.adjust($teal-9, $alpha: -0.1, $blackness: 10%) 80%,
         color.adjust($dark, $alpha: -0.2) 80%,
         color.adjust($dark, $alpha: -0.5) 81%,
         color.adjust($dark, $alpha: -1.0) 99%,

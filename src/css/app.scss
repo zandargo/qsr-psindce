@@ -61,3 +61,21 @@ $txt-primary: color.adjust($primary, $blackness: 80%);
   float: right;
   margin-left: 32px;
 }
+
+.bg-image {
+  background-size: cover;
+  // background-position: 20% 0%;
+  // background-image: url('../../public/img/vivid-blurred-colorful-bg.jpg');
+
+  // background-image: linear-gradient( 135deg, #e0f2f1 10%, #bc3941 100%),
+  //   radial-gradient(circle, #0000 45%, #000f 48%),
+  //   radial-gradient(ellipse farthest-corner, #fc1c14 20%, #cf15cf 80%);
+
+  background-image: linear-gradient( 108deg,
+    hsla(356, 80%, 80%, 0.2) 05%,
+    hsla(174, 80%, 72%, 0.4) 25%,
+    hsla(174, 80%, 72%, 0.4) 55%,
+    hsla(356, 80%, 80%, 0.2) 95%,
+    );
+
+}
