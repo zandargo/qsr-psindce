@@ -14,13 +14,13 @@
       </strong>
 
       <div>
-        <q-img
+        <!-- <q-img
           src="img/IMG-006.webp"
           width="320px"
           spinner-color="primary"
           spinner-size="36px"
           class="left-image shadow-5 rounded-1"
-        />
+        /> -->
 
         Tudo começou quando, em 1993, a Federação Nacional dos Psicólogos (FENAPSI) encaminhou uma atividade de mobilização em diversos estados aonde não existiam sindicatos de psicólogos, buscando levar representantes para a Plenária Nacional que acontecia naquele ano em São Paulo. Nesta época, existiam os sindicatos de Alagoas, Espírito Santo, Minas Gerais, São Paulo, Rio de Janeiro, Rio Grande do Sul e Santa Catarina. Então, a psicóloga Meire Viana foi convidada à contribuir neste evento, representando o Ceará. Ao retornar, trouxe na bagagem a missão de iniciar um processo de mobilização dos psicólogos e psicólogas no Ceará rumo ao debate sobre a organização sindical.
         <br>
@@ -69,13 +69,13 @@
 
       <div>
 
-        <q-img
+        <!-- <q-img
           src="img/IMG-007.webp"
           width="320px"
           spinner-color="primary"
           spinner-size="36px"
           class="right-image shadow-5 rounded-1"
-        />
+        /> -->
 
         Passados vários anos desde sua fundação, as gestões do PSINDCE se sucederam entre conquistas e dificuldades, mas sempre procurando abranger um maior número de profissionais. É importante que se diga que nem sempre foi fácil manter o sindicato em pé, mas, graças à perseverança de alguns, hoje vivemos um momento de maior participação e crescimento. A gestão atual vem se encontrando para abrir novos canais de comunicação e ampliar os debates com a sociedade acerca da importância da(o) psicóloga(o). Acreditamos que, mesmo não sendo uma tarefa fácil, não custa nada tentar.
         <br>

@@ -3,18 +3,18 @@
 
     <q-parallax :height="valHeight" :speed="1">
       <template v-slot:media>
-        <img src="/img/BGW-002.png" class="opacity-45" position="100% 100%" style="bottom: -48% !important;" />
+        <!-- <img src="/img/BGW-002.png" class="opacity-45" position="100% 100%" style="bottom: -48% !important;" /> -->
       </template>
 
       <template v-slot:content="scope">
         <div class="absolute column items-center">
           <div class="row no-wrap items-center">
             <img src="/icons/Logo-double-02b1.svg" style="width: 120px;" class="">
-            <div class="text-h3 text-white text-center text-bold text-italic text-shadow1">
+            <div class="text-h3 text-center text-bold text-italic text-shadow1">
               PSINDCE
             </div>
           </div>
-          <div class="text-h5 text-white text-center text-bold text-italic text-shadow1">
+          <div class="text-h5 text-center text-bold text-italic text-shadow1">
             SINDICATO DOS PSICÓLOGOS <br> DO CEARÁ
           </div>
 
@@ -63,8 +63,8 @@
       </div>
 
       <div class="col-6 flex flex-center">
-        <q-img src="/img/BGW-004.png" spinner-color="primary" spinner-size="82px" fit="cover" width="420px"
-          class="opacity-85 shadow-5 rounded-1" />
+        <!-- <q-img src="/img/BGW-004.png" spinner-color="primary" spinner-size="82px" fit="cover" width="420px"
+          class="opacity-85 shadow-5 rounded-1" /> -->
       </div>
 
     </div>
@@ -75,7 +75,7 @@
 
     <q-parallax :height="valHeight" :speed="1">
       <template v-slot:media>
-        <img src="/img/BGW-003.png" class="opacity-45" position="100% 100%" style="bottom: -36% !important;" />
+        <!-- <img src="/img/BGW-003.png" class="opacity-45" position="100% 100%" style="bottom: -36% !important;" /> -->
       </template>
 
       <template v-slot:content="scope">
@@ -128,6 +128,7 @@
 
 <style lang="scss">
   .text-shadow1 {
-    text-shadow: 4px 4px 8px #000f;
+    // text-shadow: 4px 4px 8px #000f;
+    text-shadow: 4px 4px 8px #0006;
   }
 </style>

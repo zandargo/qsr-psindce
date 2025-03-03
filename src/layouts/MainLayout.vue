@@ -53,7 +53,17 @@
 
       <q-page-container class="bg-image 6bg-teal-1">
         <router-view />
+        <Footer/>
       </q-page-container>
+
+      <!-- <q-footer elevated class="" style="height: 32px;">
+        <q-toolbar class="bg-py-none column items-start">
+          <div class="full-width">
+            Footer
+          </div>
+        </q-toolbar>
+      </q-footer> -->
+
     </q-layout>
 
     <ButtonContact class="fixed-bottom-right" />
@@ -65,6 +75,7 @@
   import EssentialLink from 'components/EssentialLink.vue'
   import { useQuasar, getCssVar } from 'quasar'
   import ButtonContact from 'components/atoms/buttonContact.vue'
+  import Footer from 'components/Footer.vue'
 
   const tab = ref('sobre')
 

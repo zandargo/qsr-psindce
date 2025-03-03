@@ -61,6 +61,22 @@
         </template>
       </q-fab-action>
 
+      <!--//* INSTAGRAM -->
+      <q-fab-action
+        @click="onClickButton('https://www.instagram.com/psindce_/', '_blank')"
+      	color="none"
+        class="q-pa-none"
+      >
+       <template v-slot:icon>
+        <q-img
+        	src="/icons/instagram.svg"
+        	spinner-color="white"
+        	spinner-size="2em"
+        	style="width: 3.15em"
+        />
+        </template>
+      </q-fab-action>
+
       <!--//* FACEBOOK -->
       <q-fab-action
         @click="onClickButton('https://www.facebook.com/psindce', '_blank')"
@@ -84,16 +100,6 @@
 </template>
 
 <script setup>
-
-  function onClickLocation() {
-    window.open('https://maps.app.goo.gl/gZ5P5Pv2Yqi8wiAy7', '_blank')
-  }
-  function onClickWhatsapp() {
-    window.open('https://wa.me/5585991207733', '_blank')
-  }
-  function onClickMail() {
-    window.open('mailto:psindce@gmail.com', '_blank')
-  }
 
   function onClickButton(link, target) {
     window.open(link, target)

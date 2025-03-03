@@ -1,9 +1,7 @@
 <template>
-  <q-page class="text-justify text-primary-12 text-weight-medium">
-
-
-    <div class="row q-px-xl q-py-md">
-      <div class="col-5">
+  <q-page class="q-pa-lg text-justify text-primary-12 text-weight-medium">
+    <div class="row q-col-gutter-x-xl justify-between">
+      <div class="col-12 col-md-5">
         <p>
           O Sindicato dos Psicólogos do Estado do Ceará - PSINDCE - é uma organização de base estadual que representa os
           interesses da categoria e da sociedade por serviços de qualidade à população. O Sindicato procura lutar por
@@ -15,14 +13,12 @@
           classe
           trabalhadora.
         </p>
-
         <p>
           Para este fim, o PSINDCE está filiado à Confederação Nacional dos Trabalhadores em Seguridade Social (CNTSS),
           Federação Estadual dos Trabalhadores em Seguridade Social (FETSS), Federação Nacional dos Psicólogos (FENAPSI)
           e
           Central Única dos Trabalhadores (CUT-CE).
         </p>
-
         <p>
           O PSINDCE entende que a luta sindical clássica de corte corporativo tem de estar articulada aos interesses
           mais
@@ -33,238 +29,106 @@
           discriminação e violência que ofendam a dignidade humana.
         </p>
       </div>
-
-      <div class="col-7 flex flex-center">
+      <!-- <div class="col-7 flex flex-center">
         <q-img src="/img/BGW-007.png" spinner-color="primary" spinner-size="82px" fit="cover" width="60%"
           class="opacity-85 shadow-5 rounded-1" />
-      </div>
-
-      <div class="col-12 q-py-xl"></div>
-
+      </div> -->
+      <!-- <div class="col-12 q-py-xl"></div>
       <div class="col-5 flex flex-center">
         <q-img src="/img/BGW-009.png" spinner-color="primary" spinner-size="82px" fit="cover" width="60%"
           class="opacity-85 shadow-5 rounded-1" />
-      </div>
+      </div> -->
 
-      <div class="col-7">
-        <!-- <table style="width:100%">
-          <tr>
-            <th>Diretor(a)</th>
-            <th>Coordenação</th>
-          </tr>
-          <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-          </tr>
+      <div class="col-12 col-md-7">
+        <div class="full-width text-bold q-mb-md">DIRETORIA ATUAL</div>
+        <div class="row q-col-gutter-md">
+          <div class="col-12 col-md-6 full-height" v-for="(member, index) in members" :key="index">
+            <q-card class="gradient-bg1">
+              <q-card-section horizontal>
+                <q-img
+                  :src="`/img/Id/${member.image}`"
+                  spinner-color="primary"
+                  :spinner-size="spinnerSize"
+                  class=""
+                  :width="'80px'"
+                />
+                <q-card-section class="col-grow col-md-8">
+                  <div class="c-name text-left">{{ member.name }}</div>
+                  <div class="c-crps text-left">{{ member.crp }}</div>
+                  <div class="c-role text-left">{{ member.role }}</div>
+                </q-card-section>
+              </q-card-section>
 
-        </table> -->
+            </q-card>
+          </div>
+        </div>
 
+        <div class="full-width text-bold q-mb-md q-mt-xl">ADJUNTOS E ADJUNTAS</div>
+        <div class="row q-col-gutter-md">
+          <div class="col-12 col-md-6 full-height" v-for="(adjunct, index) in adjuncts" :key="index">
+            <q-card class="gradient-bg1">
+              <q-card-section horizontal>
+                <q-img
+                  :src="`/img/Id/${adjunct.image}`"
+                  spinner-color="primary"
+                  :spinner-size="spinnerSize"
+                  class=""
+                  :width="'80px'"
+                />
+                <q-card-section class="col-grow col-md-8">
+                  <div class="c-name text-left">{{ adjunct.name }}</div>
+                  <div class="c-crps text-left">{{ adjunct.crp }}</div>
+                  <div class="c-role text-left">{{ adjunct.role }}</div>
+                </q-card-section>
+              </q-card-section>
+            </q-card>
+          </div>
+        </div>
 
+        <div class="full-width text-bold q-mb-md q-mt-xl">CONSELHO FISCAL</div>
+        <div class="row q-col-gutter-md">
+          <div class="col-12 col-md-6 full-height" v-for="(council, index) in councilMembers" :key="index">
+            <q-card class="gradient-bg1">
+              <q-card-section horizontal>
+                <q-img
+                  :src="`/img/Id/${council.image}`"
+                  spinner-color="primary"
+                  :spinner-size="spinnerSize"
+                  class=""
+                  :width="'80px'"
+                />
+                <q-card-section class="col-grow col-md-8">
+                  <div class="c-name text-left">{{ council.name }}</div>
+                  <div class="c-crps text-left">{{ council.crp }}</div>
+                </q-card-section>
+              </q-card-section>
+            </q-card>
+          </div>
+        </div>
 
-        <!-- <div class="full-width text-bold q-mb-lg">DIRETORIA ATUAL</div> -->
-
-        <table class="full-width">
-          <tbody>
-
-            <tr>
-              <td colspan="3" class="text-bold">
-                <div class="q-mb-md">
-                  DIRETORIA ATUAL
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <div class="td1">Claudemi Campos</div>
-                <div class="td2">(CRP 11/14061)</div>
-              </td>
-              <td>
-                <div class="td1">Coordenação Geral</div>
-                <div class="td2">&nbsp;</div>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <div class="td1">Fernando Pinto</div>
-                <div class="td2">(CRP 11/11607)</div>
-              </td>
-              <td>
-                <div class="td1">Coordenação Administrativa</div>
-                <div class="td2">&nbsp;</div>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <div class="td1">Karen Crisostomo</div>
-                <div class="td2">(CRP 11/13272)</div>
-              </td>
-              <td>
-                <div class="td1">Coordenação de Comunicação</div>
-                <div class="td2">&nbsp;</div>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <div class="td1">Jannayna Queiroz</div>
-                <div class="td2">(CRP 11/05087)</div>
-              </td>
-              <td>
-                <div class="td1">Coordenação de Formação</div>
-                <div class="td2">&nbsp;</div>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <div class="td1">Jorge Luiz</div>
-                <div class="td2">(CRP 11/08046)</div>
-              </td>
-              <td>
-                <div class="td1">Coordenação de Políticas</div>
-                <div class="td2">&nbsp;</div>
-              </td>
-            </tr>
-
-            <tr>
-              <td colspan="2">&nbsp;</td>
-            </tr>
-
-            <tr>
-              <td colspan="2" class="text-bold">
-                <div class="q-mb-md">
-                  ADJUNTOS E ADJUNTAS
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <div class="td1">Helena Oliveira</div>
-                <div class="td2">(CRP 11/14909)</div>
-              </td>
-              <td>
-                <div class="td1">Coordenação Geral</div>
-                <div class="td2">&nbsp;</div>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <div class="td1">Rozelir Lima</div>
-                <div class="td2">(CRP 11/18978)</div>
-              </td>
-              <td>
-                <div class="td1">Coordenação Administrativa</div>
-                <div class="td2">&nbsp;</div>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <div class="td1">Elisângela Chagas</div>
-                <div class="td2">(CRP 11/10712)</div>
-              </td>
-              <td>
-                <div class="td1">Coordenação de Comunicação</div>
-                <div class="td2">&nbsp;</div>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <div class="td1">Gisele Peixoto</div>
-                <div class="td2">(CRP 11/2194)</div>
-              </td>
-              <td>
-                <div class="td1">Coordenação de Formação</div>
-                <div class="td2">&nbsp;</div>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <div class="td1">Walesson Castro</div>
-                <div class="td2">(CRP 11/13625)</div>
-              </td>
-              <td>
-                <div class="td1">Coordenação de Políticas Públicas</div>
-                <div class="td2">&nbsp;</div>
-              </td>
-            </tr>
-
-
-
-            <tr>
-              <td colspan="2">&nbsp;</td>
-            </tr>
-            <tr>
-              <td colspan="2" class="text-bold">
-                <div class="q-mb-md">
-                  CONSELHO FISCAL
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <div class="td1">Meire Viana</div>
-                <div class="td2">(CRP 11/00919)</div>
-              </td>
-              <td></td>
-            </tr>
-
-            <tr>
-              <td>
-                <div class="td1">Ivan Nogueira</div>
-                <div class="td2">(CRP 11/15086)</div>
-              </td>
-              <td></td>
-            </tr>
-
-            <tr>
-              <td>
-                <div class="td1">Fúlvio Robert</div>
-                <div class="td2">(CRP 11/03494)</div>
-              </td>
-              <td></td>
-            </tr>
-
-
-
-            <tr>
-              <td colspan="2">&nbsp;</td>
-            </tr>
-            <tr>
-              <td colspan="2" class="text-bold">
-                <div class="q-mb-md">
-                  SUPLENTE
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="td1">Priscila Araújo</div>
-                <div class="td2">(CRP 11/07998)</div>
-              </td>
-              <td></td>
-            </tr>
-
-
-
-          </tbody>
-        </table>
+        <div class="full-width text-bold q-mb-md q-mt-xl">SUPLENTE</div>
+        <div class="row q-col-gutter-md">
+          <div class="col-12 col-md-6 full-height" v-for="(substitute, index) in substitutes" :key="index">
+            <q-card class="gradient-bg1">
+              <q-card-section horizontal>
+                <q-img
+                  :src="`/img/Id/${substitute.image}`"
+                  spinner-color="primary"
+                  :spinner-size="spinnerSize"
+                  class=""
+                  :width="'80px'"
+                />
+                <q-card-section class="col-grow col-md-8">
+                  <div class="c-name text-left">{{ substitute.name }}</div>
+                  <div class="c-crps text-left">{{ substitute.crp }}</div>
+                </q-card-section>
+              </q-card-section>
+            </q-card>
+          </div>
+        </div>
 
       </div>
-
-
-
     </div>
-
-
   </q-page>
 </template>
 
@@ -275,8 +139,99 @@
     name: 'IndexPage'
   });
 
-  const valHeight = ref(600)
+  const spinnerSize = ref('32px')
 
+  const members = ref([
+    {
+      name: 'Claudemi Campos',
+      crp: '(CRP 11/14061)',
+      role: 'Coordenação Geral',
+      image: 'Claudemi.JPG'
+    },
+    {
+      name: 'Fernando Pinto',
+      crp: '(CRP 11/11607)',
+      role: 'Coordenação Administrativa',
+      image: 'Fernando.JPG'
+    },
+    {
+      name: 'Karen Crisostomo',
+      crp: '(CRP 11/13272)',
+      role: 'Coordenação de Comunicação',
+      image: 'Karen.PNG'
+    },
+    {
+      name: 'Jannayna Queiroz',
+      crp: '(CRP 11/05087)',
+      role: 'Coordenação de Formação',
+      image: 'Jannayna.JPG'
+    },
+    {
+      name: 'Jorge Luiz',
+      crp: '(CRP 11/08046)',
+      role: 'Coordenação de Políticas',
+      image: 'Jorge_Luiz.JPG'
+    }
+  ])
+
+  const adjuncts = ref([
+    {
+      name: 'Helena Oliveira',
+      crp: '(CRP 11/14909)',
+      role: 'Coordenação Geral',
+      image: 'Fca_Helena.JPG'
+    },
+    {
+      name: 'Rozelir Lima',
+      crp: '(CRP 11/18978)',
+      role: 'Coordenação Administrativa',
+      image: 'Rozelir.JPG'
+    },
+    {
+      name: 'Elisângela Chagas',
+      crp: '(CRP 11/10712)',
+      role: 'Coordenação de Comunicação',
+      image: 'Elisangela.PNG'
+    },
+    {
+      name: 'Gisele Peixoto',
+      crp: '(CRP 11/2194)',
+      role: 'Coordenação de Formação',
+      image: 'Gisele.PNG'
+    },
+    {
+      name: 'Walesson Castro',
+      crp: '(CRP 11/13625)',
+      role: 'Coordenação de Políticas Públicas',
+      image: 'Ant_Walesson.PNG'
+    }
+  ])
+
+  const councilMembers = ref([
+    {
+      name: 'Meire Viana',
+      crp: '(CRP 11/00919)',
+      image: 'Meire.PNG'
+    },
+    {
+      name: 'Ivan Nogueira',
+      crp: '(CRP 11/15086)',
+      image: 'Ivan.PNG'
+    },
+    {
+      name: 'Fúlvio Robert',
+      crp: '(CRP 11/03494)',
+      image: ''
+    }
+  ])
+
+  const substitutes = ref([
+    {
+      name: 'Priscila Araújo',
+      crp: '(CRP 11/07998)',
+      image: ''
+    }
+  ])
 </script>
 
 <style lang="scss">
@@ -293,5 +248,32 @@
     font-size: small;
     line-height: 1.75em;
     margin-bottom: 10px;
+  }
+
+  .td3 {
+    font-size: medium;
+    line-height: 1.75em;
+  }
+
+  .c-name {
+    line-height: .75em;
+  }
+
+  .c-crps {
+    font-size: small;
+    // line-height: 1.75em;
+    margin-bottom: 0px;
+  }
+
+  .c-role {
+    font-size: medium;
+    line-height: 1.05em;
+  }
+
+  $green1: rgba($primary, 0.25);
+  $red1: rgba($negative, 0.25);
+
+  .gradient-bg1 {
+    background: linear-gradient(-30deg, $green1, $red1);
   }
 </style>

@@ -49,7 +49,7 @@
 
 
 
-      <!-- <div class="text-h5 text-bold full-width text-center q-pt-xl">
+      <div class="text-h5 text-bold full-width text-center q-pt-xl">
         Convênios
       </div>
 
@@ -75,6 +75,51 @@
 
       <div class="conveniado">
         <q-img
+          src="img/Logo_efc01.JPG"
+          width="160px"
+          spinner-color="primary"
+          spinner-size="36px"
+          class="left-image shadow-5 rounded-1"
+        />
+        <strong>
+          EFC - Erinaldo Frederico Cruz
+        </strong>
+        <br>
+        [Texto]
+      </div>
+
+      <div class="conveniado">
+        <q-img
+          src="img/Logo_IP01.JPG"
+          width="160px"
+          spinner-color="primary"
+          spinner-size="36px"
+          class="left-image shadow-5 rounded-1"
+        />
+        <strong>
+          Iarlly Plácido - Nutricionista
+        </strong>
+        <br>
+        [Texto]
+      </div>
+
+      <div class="conveniado">
+        <q-img
+          src="img/Logo_sesc.PNG"
+          width="160px"
+          spinner-color="primary"
+          spinner-size="36px"
+          class="left-image shadow-5 rounded-1"
+        />
+        <strong>
+          SESC
+        </strong>
+        <br>
+        [Texto]
+      </div>
+
+      <!-- <div class="conveniado">
+        <q-img
           src="img/LogoCHC.png"
           width="160px"
           spinner-color="primary"
@@ -86,9 +131,9 @@
         </strong>
         <br>
         O PSINDCE é parceiro de um dos maiores escritórios de advocacia do estado! Em caso de querer abrir processos individuais de ordem penal, civil ou trabalhista com os serviços do escritório CHC Advocacia, o associado terá um desconto de 25% na abertura dos processos e pagará somente 15% de honorários ao final da ação.
-      </div>
+      </div> -->
 
-      <div class="conveniado">
+      <!-- <div class="conveniado">
         <q-img
           src="img/Exatus.png"
           width="160px"
@@ -104,9 +149,9 @@
         Telefone: (85) 3067-0327<br>
         Rua Professor Carlos Lobo, 260. Sala 111.
         Cidade dos Funcionários.
-      </div>
+      </div> -->
 
-      <div class="conveniado">
+      <!-- <div class="conveniado">
         <q-img
           src="img/Tiradentes.jpg"
           width="160px"
@@ -119,9 +164,9 @@
         </strong>
         <br>
         A(o) associada(o) e seus dependentes diretos têm descontos de 20% em cursos preparatórios para concursos, pré-vestibular e em educação regular (Ensino infantil, Ensino Fundamental e Ensino Médio).
-      </div>
+      </div> -->
 
-      <div class="conveniado">
+      <!-- <div class="conveniado">
         <q-img
           src="img/LOGO_POLIGLOTA.jpg"
           width="160px"
@@ -133,9 +178,9 @@
           Instituto Poliglota
         </strong><br>
         A(o) associada(o) e seus dependentes diretos têm duas possibilidades de descontos em cursos de línguas (Inglês, espanhol, francês, alemão, italiano, japonês, chinês, russo, polonês e árabe). São 20% de desconto no pagamento do semestre à vista ou 10% de desconto nas mensalidades, em caso de pagar parcelado.
-      </div>
+      </div> -->
 
-      <div class="conveniado">
+      <!-- <div class="conveniado">
         <q-img
           src="img/logo_engenhoca.jpg"
           width="160px"
@@ -148,9 +193,9 @@
         </strong><br>
         A(o) associada(o) PSINDCE, cônjuge e seus dependentes diretos têm 15% de desconto para o parque. O parque oferece ampla área verde, lago, restaurante e muita diversão, como caiaque, tirolesa, arvorismo e muito mais. Clique aqui e confira!
         É apresentar o cartão e se divertir!
-      </div>
+      </div> -->
 
-      <div class="conveniado">
+      <!-- <div class="conveniado">
         <q-img
           src="img/Logo_Óticas_Boris_3D.png"
           width="160px"
@@ -162,9 +207,9 @@
           Óticas Boris
         </strong><br>
         Esta parceria oferece 25% de desconto nas compras de óculos de grau a vista em dinheiro, 20% de descontos nas compras de óculos de grau nas compras parceladas em até 3 vezes no cheque ou no cartão. Para os óculos esportivos, os descontos são de 20% na compra a vista em dinheiro e de 15% na compra parcelada em até 3 vezes no cheque ou no cartão. São muitos descontos especialmente para você nas 80 lojas da rede!
-      </div>
+      </div> -->
 
-      <div class="conveniado">
+      <!-- <div class="conveniado">
         <q-img
           src="img/LogoGirao.jpg"
           width="160px"
@@ -176,9 +221,9 @@
           Girão Móveis e Decorações
         </strong><br>
         Esta parceria oferece 30% de desconto nas compras a vista e 10% de desconta nas compras parceladas em até 3 vezes no cheque ou cartão. Aqui a associada(o) PSINDCE encontra móveis e decoração de qualidade para sua casa ou seu consultório.
-      </div>
+      </div> -->
 
-      <div class="conveniado">
+      <!-- <div class="conveniado">
         <q-img
           src="img/emilioribas1.png"
           width="160px"
@@ -191,7 +236,7 @@
         </strong><br>
         O PSINDCE fechou com um dos mais tradicionais laboratórios de análises clínicas do Estado do Ceará, que oferece aos nossos associados a tabela de preços praticada aos convênios de planos de saúde. Essa tabela pode significar descontos que variam de 10% a 50%, dependendo do exame. O Laboratório Emílio Ribas tem 9 unidades na capital e
         está pronto para atender ao nosso associado com qualidade.
-      </div>
+      </div> -->
 
       <div class="text-bold">
         Fique atenta(o), pois, em breve, estaremos fechando mais convênios e aumentando nossas parcerias!
@@ -203,7 +248,7 @@
 
       <div>
         Destacamos ainda que estes benefícios não interferem nos serviços prestados pelo PSINDCE no que diz respeito a acordos ou negociações coletivas, serviços de revisão contábil para homologações e ações coletivas na Justiça. Para esses casos, os profissionais de psicologia podem contar com as nossas assessorias jurídica e contábil.
-      </div> -->
+      </div>
 
       <div class="text-bold">
         Cartão do Associado PSINDCE
