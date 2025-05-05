@@ -84,8 +84,6 @@
         <strong>
           EFC - Erinaldo Frederico Cruz
         </strong>
-        <br>
-        [Texto]
       </div>
 
       <div class="conveniado">
@@ -99,8 +97,6 @@
         <strong>
           Iarlly Plácido - Nutricionista
         </strong>
-        <br>
-        [Texto]
       </div>
 
       <div class="conveniado">
@@ -114,8 +110,6 @@
         <strong>
           SESC
         </strong>
-        <br>
-        [Texto]
       </div>
 
       <!-- <div class="conveniado">
