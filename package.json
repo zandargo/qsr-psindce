@@ -23,7 +23,14 @@
     "@intlify/vite-plugin-vue-i18n": "^3.4.0",
     "@quasar/app-vite": "^1.10.0",
     "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.47"
+    "postcss": "^8.4.47",
+    "workbox-build": "^7.3.0",
+    "workbox-cacheable-response": "^7.3.0",
+    "workbox-core": "^7.3.0",
+    "workbox-expiration": "^7.3.0",
+    "workbox-precaching": "^7.3.0",
+    "workbox-routing": "^7.3.0",
+    "workbox-strategies": "^7.3.0"
   },
   "engines": {
     "node": "^20 || ^18 || ^16",
