@@ -58,15 +58,20 @@
       </div>
 
       <div>
-        Quem é sindicalizado no PSINDCE, além de contar com a nossa luta em prol de melhores condições de trabalho, também curte alguns benefícios com nossos parceiros. Basta se associar e apresentar o Cartão do Associado PSINDCE!
+        Quem é sindicalizado no PSINDCE, além de contar com a nossa luta em prol de melhores condições de trabalho,
+        também curte alguns benefícios com nossos parceiros. Basta se associar e apresentar o Cartão do Associado
+        PSINDCE!
       </div>
 
       <div>
-        Para se associar, preencha o formulário de sindicalização e siga as instruções que enviaremos por e-mail. Para quem já é associado, só resta aproveitar!
+        Para se associar, preencha o formulário de sindicalização e siga as instruções que enviaremos por e-mail. Para
+        quem já é associado, só resta aproveitar!
       </div>
 
       <div>
-        Os nossos convênios são estabelecidos com base em uma política de qualidade, que visa proporcionar com o que há de melhor em vários segmentos. Cada associado já pode contar com uma rede de benefícios, que aos poucos se estenderá para todo o Ceará. Conheça a nossa Política de Convênios clicando no link.
+        Os nossos convênios são estabelecidos com base em uma política de qualidade, que visa proporcionar com o que há
+        de melhor em vários segmentos. Cada associado já pode contar com uma rede de benefícios, que aos poucos se
+        estenderá para todo o Ceará. Conheça a nossa Política de Convênios clicando no link.
       </div>
 
       <div class="text-bold q-pt-lg">
@@ -74,41 +79,34 @@
       </div>
 
       <div class="conveniado">
-        <q-img
-          src="img/Logo_efc01.JPG"
-          width="160px"
-          spinner-color="primary"
-          spinner-size="36px"
-          class="left-image shadow-5 rounded-1"
-        />
+        <q-img src="img/Logo_efc01.JPG" width="160px" spinner-color="primary" spinner-size="36px"
+          class="left-image shadow-5 rounded-1" />
         <strong>
           EFC - Erinaldo Frederico Cruz
         </strong>
       </div>
 
       <div class="conveniado">
-        <q-img
-          src="img/Logo_IP01.JPG"
-          width="160px"
-          spinner-color="primary"
-          spinner-size="36px"
-          class="left-image shadow-5 rounded-1"
-        />
+        <q-img src="img/Logo_IP01.JPG" width="160px" spinner-color="primary" spinner-size="36px"
+          class="left-image shadow-5 rounded-1" />
         <strong>
           Iarlly Plácido - Nutricionista
         </strong>
       </div>
 
       <div class="conveniado">
-        <q-img
-          src="img/Logo_sesc.PNG"
-          width="160px"
-          spinner-color="primary"
-          spinner-size="36px"
-          class="left-image shadow-5 rounded-1"
-        />
+        <q-img src="img/Logo_sesc.PNG" width="160px" spinner-color="primary" spinner-size="36px"
+          class="left-image shadow-5 rounded-1" />
         <strong>
           SESC
+        </strong>
+      </div>
+
+      <div class="conveniado">
+        <q-img src="img/LOGO_Crisalide.png" width="160px" spinner-color="primary" spinner-size="36px"
+          class="left-image shadow-5 rounded-1" />
+        <strong>
+          Instituto Crisalide
         </strong>
       </div>
 
@@ -237,34 +235,38 @@
       </div>
 
       <div>
-        As(os) profissionais devidamente sindicalizadas(os) devem solicitar o seu <strong>Cartão do Associado PSINDCE</strong> para curtir estes benefícios. Para aqueles que já estão em dia com o sindicato e ainda não têm o cartão, pedimos a gentileza de entrar em contato conosco para providenciar.
+        As(os) profissionais devidamente sindicalizadas(os) devem solicitar o seu <strong>Cartão do Associado
+          PSINDCE</strong> para curtir estes benefícios. Para aqueles que já estão em dia com o sindicato e ainda não
+        têm o cartão, pedimos a gentileza de entrar em contato conosco para providenciar.
       </div>
 
       <div>
-        Destacamos ainda que estes benefícios não interferem nos serviços prestados pelo PSINDCE no que diz respeito a acordos ou negociações coletivas, serviços de revisão contábil para homologações e ações coletivas na Justiça. Para esses casos, os profissionais de psicologia podem contar com as nossas assessorias jurídica e contábil.
+        Destacamos ainda que estes benefícios não interferem nos serviços prestados pelo PSINDCE no que diz respeito a
+        acordos ou negociações coletivas, serviços de revisão contábil para homologações e ações coletivas na Justiça.
+        Para esses casos, os profissionais de psicologia podem contar com as nossas assessorias jurídica e contábil.
       </div>
 
-      <div class="text-bold">
+      <!-- <div class="text-bold">
         Cartão do Associado PSINDCE
       </div>
 
       <div>
-        <q-img
-          src="img/Cartao_PSINDCE.jpg"
-          width="320px"
-          spinner-color="primary"
-          spinner-size="36px"
-          class="left-image shadow-5 rounded-1"
-        />
-        O Associado PSINDCE tem direito a uma via do cartão do associado, que pode ser solicitada e retirada diretamente com o sindicato. Para utilizar os nossos convênios, é necessário apresentar este cartão e algum documento de identificação com foto.
+        <q-img src="img/Cartao_PSINDCE.jpg" width="320px" spinner-color="primary" spinner-size="36px"
+          class="left-image shadow-5 rounded-1" />
+        O Associado PSINDCE tem direito a uma via do cartão do associado, que pode ser solicitada e retirada diretamente
+        com o sindicato. Para utilizar os nossos convênios, é necessário apresentar este cartão e algum documento de
+        identificação com foto.
         <br><br>
-        Cada cartão tem validade de um ano (até maio do ano seguinte) e o associado receberá um novo a cada vez que renovar sua associação com o PSINDCE. Em caso de perda cartão, o associado pode solicitar uma segunda via ao sindicato, porém, deverá arcar com as despesas de confecção do mesmo.
+        Cada cartão tem validade de um ano (até maio do ano seguinte) e o associado receberá um novo a cada vez que
+        renovar sua associação com o PSINDCE. Em caso de perda cartão, o associado pode solicitar uma segunda via ao
+        sindicato, porém, deverá arcar com as despesas de confecção do mesmo.
         <br><br>
-        O Cartão do Associado é para todos aqueles que acreditam no PSINDCE e que querem fortalecer nossa categoria! <br>
+        O Cartão do Associado é para todos aqueles que acreditam no PSINDCE e que querem fortalecer nossa categoria!
+        <br>
         <strong>
           Associe-se e peça já o seu!
         </strong>
-      </div>
+      </div> -->
 
 
 
