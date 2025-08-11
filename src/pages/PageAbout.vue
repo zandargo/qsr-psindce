@@ -19,7 +19,7 @@
         <div class="row justify-center">
           <div class="col-12 col-lg-10">
             <div class="mission-card q-pa-xl q-mb-xl">
-              <div class="text-h5 text-weight-bold text-center q-mb-lg text-teal-8">
+              <div class="text-h5 text-weight-bold text-center q-mb-lg">
                 Nossa Missão
               </div>
               <div class="mission-content">
