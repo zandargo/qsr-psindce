@@ -186,11 +186,17 @@
       role: 'Coordenação Geral',
       image: 'Claudemi.JPG'
     },
+    // {
+    //   name: 'Fernando Pinto',
+    //   crp: '(CRP 11/11607)',
+    //   role: 'Coordenação Administrativa',
+    //   image: 'Fernando.JPG'
+    // },
     {
-      name: 'Fernando Pinto',
-      crp: '(CRP 11/11607)',
+      name: 'Rozelir Lima',
+      crp: '(CRP 11/18978)',
       role: 'Coordenação Administrativa',
-      image: 'Fernando.JPG'
+      image: 'Rozelir.JPG'
     },
     {
       name: 'Karen Crisostomo',
@@ -198,11 +204,17 @@
       role: 'Coordenação de Comunicação',
       image: 'Karen.PNG'
     },
+    // {
+    //   name: 'Jannayna Queiroz',
+    //   crp: '(CRP 11/05087)',
+    //   role: 'Coordenação de Formação',
+    //   image: 'Jannayna.JPG'
+    // },
     {
-      name: 'Jannayna Queiroz',
-      crp: '(CRP 11/05087)',
-      role: 'Coordenação de Formação',
-      image: 'Jannayna.JPG'
+      name: 'Walesson Castro',
+      crp: '(CRP 11/13625)',
+      role: 'Coordenação de Políticas Públicas',
+      image: 'Ant_Walesson.PNG'
     },
     {
       name: 'Jorge Luiz',
@@ -220,12 +232,6 @@
       image: 'Fca_Helena.JPG'
     },
     {
-      name: 'Rozelir Lima',
-      crp: '(CRP 11/18978)',
-      role: 'Coordenação Administrativa',
-      image: 'Rozelir.JPG'
-    },
-    {
       name: 'Elisângela Chagas',
       crp: '(CRP 11/10712)',
       role: 'Coordenação de Comunicação',
@@ -236,12 +242,6 @@
       crp: '(CRP 11/2194)',
       role: 'Coordenação de Formação',
       image: 'Gisele.PNG'
-    },
-    {
-      name: 'Walesson Castro',
-      crp: '(CRP 11/13625)',
-      role: 'Coordenação de Políticas Públicas',
-      image: 'Ant_Walesson.PNG'
     }
   ])
 
