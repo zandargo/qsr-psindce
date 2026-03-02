@@ -1,5 +1,5 @@
 <template>
-  <q-scroll-area style="height: calc(100svh)" :thumb-style="thumbStyle">
+  <q-scroll-area ref="scrollAreaRef" style="height: calc(100svh)" :thumb-style="thumbStyle">
     <q-layout view="hHh Lpr fFf">
       <q-header class="q-pb-sm bg-header">
         <q-toolbar>
@@ -53,7 +53,7 @@
 
       <q-page-container class="bg-image 6bg-teal-1">
         <router-view />
-        <Footer/>
+        <Footer />
       </q-page-container>
 
       <!-- <q-footer elevated class="" style="height: 32px;">
@@ -71,13 +71,20 @@
 </template>
 
 <script setup>
-  import { ref } from 'vue'
+  import { ref, watch } from 'vue'
+  import { useRoute } from 'vue-router'
   import EssentialLink from 'components/EssentialLink.vue'
   import { useQuasar, getCssVar } from 'quasar'
   import ButtonContact from 'components/atoms/buttonContact.vue'
   import Footer from 'components/Footer.vue'
 
   const tab = ref('sobre')
+  const scrollAreaRef = ref(null)
+  const route = useRoute()
+
+  watch(() => route.path, () => {
+    scrollAreaRef.value?.setScrollPosition('vertical', 0)
+  })
 
   defineOptions({
     name: 'MainLayout'
@@ -94,7 +101,7 @@
 
   const leftDrawerOpen = ref(false)
 
-  function toggleLeftDrawer () {
+  function toggleLeftDrawer() {
     leftDrawerOpen.value = !leftDrawerOpen.value
   }
 

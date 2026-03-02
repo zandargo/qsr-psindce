@@ -246,11 +246,11 @@
   ])
 
   const councilMembers = ref([
-    {
-      name: 'Meire Viana',
-      crp: '(CRP 11/00919)',
-      image: 'Meire.PNG'
-    },
+    // {
+    //   name: 'Meire Viana',
+    //   crp: '(CRP 11/00919)',
+    //   image: 'Meire.PNG'
+    // },
     {
       name: 'Ivan Nogueira',
       crp: '(CRP 11/15086)',
