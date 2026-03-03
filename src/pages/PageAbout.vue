@@ -96,6 +96,28 @@
           </div>
         </div>
 
+        <!-- Coordenação de Comunicação -->
+        <div class="team-subsection q-mb-xl">
+          <div class="subsection-header q-pa-md q-mb-lg">
+            <div class="text-h5 text-weight-bold text-center">COORDENAÇÃO DE COMUNICAÇÃO</div>
+          </div>
+          <div class="row q-col-gutter-lg justify-center">
+            <div class="col-12 col-sm-6 col-lg-4" v-for="(commCoord, index) in communicationCoords" :key="index">
+              <div class="member-card q-pa-md">
+                <div class="member-photo-container q-mb-md">
+                  <q-img :src="`/img/Id/${commCoord.image}`" spinner-color="primary" :spinner-size="spinnerSize"
+                    class="member-photo" width="100px" height="100px" fit="cover" />
+                </div>
+                <div class="member-info text-center">
+                  <div class="member-name text-weight-bold q-mb-xs">{{ commCoord.name }}</div>
+                  <div class="member-crp text-caption q-mb-xs">{{ commCoord.crp }}</div>
+                  <div class="member-role text-body2 text-weight-medium">{{ commCoord.role }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Adjuntos e Adjuntas -->
         <div class="team-subsection q-mb-xl">
           <div class="subsection-header q-pa-md q-mb-lg">
@@ -180,12 +202,6 @@
   const spinnerSize = ref('32px')
 
   const members = ref([
-    {
-      name: 'Claudemi Campos',
-      crp: '(CRP 11/14061)',
-      role: 'Coordenação Geral',
-      image: 'Claudemi.JPG'
-    },
     // {
     //   name: 'Fernando Pinto',
     //   crp: '(CRP 11/11607)',
@@ -197,12 +213,6 @@
       crp: '(CRP 11/18978)',
       role: 'Coordenação Administrativa',
       image: 'Rozelir.JPG'
-    },
-    {
-      name: 'Karen Crisostomo',
-      crp: '(CRP 11/13272)',
-      role: 'Coordenação de Comunicação',
-      image: 'Karen.PNG'
     },
     // {
     //   name: 'Jannayna Queiroz',
@@ -221,6 +231,21 @@
       crp: '(CRP 11/08046)',
       role: 'Coordenação de Políticas',
       image: 'Jorge_Luiz.JPG'
+    }
+  ])
+
+  const communicationCoords = ref([
+    {
+      name: 'Claudemi Campos',
+      crp: '(CRP 11/14061)',
+      role: 'Coordenação Geral',
+      image: 'Claudemi.JPG'
+    },
+    {
+      name: 'Karen Crisostomo',
+      crp: '(CRP 11/13272)',
+      role: 'Coordenação de Comunicação',
+      image: 'Karen.PNG'
     }
   ])
 
