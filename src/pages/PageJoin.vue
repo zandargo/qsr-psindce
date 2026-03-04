@@ -266,6 +266,47 @@
         </div>
       </div>
     </section>
+
+    <!-- Renewal Section -->
+    <section class="renewal-section q-py-xl">
+      <div class="container">
+        <div class="row justify-center">
+          <div class="col-12 col-md-10 col-lg-8">
+            <div class="renewal-card q-pa-xl">
+              <div class="text-h3 text-center text-weight-bold q-mb-md renewal-title">
+                RENOVAÇÃO E FILIAÇÃO<br>
+                <span class="psindce-highlight">PSINDCE 2026</span>
+              </div>
+
+              <div class="installment-badge q-mb-xl">
+                <span class="installment-text">PARCELE EM <strong>12x</strong> SEM JUROS</span>
+              </div>
+
+              <div class="renewal-benefits q-mb-xl">
+                <div class="renewal-item q-mb-lg">
+                  <q-icon name="check_circle" size="40px" color="amber-8" class="check-icon" />
+                  <div class="renewal-text">
+                    <strong>Anuidade renovada</strong> a cada ano
+                  </div>
+                </div>
+
+                <div class="renewal-item q-mb-xl">
+                  <q-icon name="check_circle" size="40px" color="amber-8" class="check-icon" />
+                  <div class="renewal-text">
+                    <strong>Realize pagamento</strong> na plataforma <strong>Sympla</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center">
+                <q-btn unelevated rounded size="xl" color="red-8" text-color="white" label="ACESSAR SYMPLA"
+                  class="sympla-button q-px-xl q-py-md" @click="openSymplaLink" icon-right="link" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </q-page>
 </template>
 
@@ -273,6 +314,10 @@
   defineOptions({
     name: 'PageJoin'
   })
+
+  const openSymplaLink = () => {
+    window.open('https://www.sympla.com.br/evento-online/renovaCAo-e-filiaCAo-do-psindce-2026/3326869', '_blank')
+  }
 </script>
 
 <style lang="scss" scoped>
@@ -301,6 +346,198 @@
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     display: inline-block;
+  }
+
+  // Renewal Section Styles
+  .renewal-section {
+    background: linear-gradient(135deg, rgba(96, 125, 139, 0.15) 0%, rgba(69, 90, 100, 0.15) 100%);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(circle at 20% 50%, rgba(255, 193, 7, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(244, 67, 54, 0.05) 0%, transparent 50%);
+      pointer-events: none;
+    }
+  }
+
+  .renewal-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border-radius: 24px;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+      animation: rotate 20s linear infinite;
+    }
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .renewal-title {
+    color: #607d8b;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    position: relative;
+
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  .psindce-highlight {
+    color: #b71c1c;
+    font-size: 3.2rem;
+    display: inline-block;
+    margin-top: 8px;
+    font-weight: 900;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+
+    @media (max-width: 768px) {
+      font-size: 2.2rem;
+    }
+  }
+
+  .installment-badge {
+    background: linear-gradient(135deg, #ffa726 0%, #ff6f00 100%);
+    color: #1a1a1a;
+    padding: 16px 48px;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(255, 167, 38, 0.4);
+    display: inline-block;
+    transform: translateX(-50%);
+    left: 50%;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: 768px) {
+      padding: 12px 32px;
+    }
+  }
+
+  .installment-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    strong {
+      font-size: 2.4rem;
+      font-weight: 900;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1.3rem;
+
+      strong {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  .renewal-benefits {
+    max-width: 600px;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+  }
+
+  .renewal-item {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px 32px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateX(8px);
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      padding: 16px 20px;
+      gap: 16px;
+    }
+  }
+
+  .check-icon {
+    flex-shrink: 0;
+    filter: drop-shadow(0 4px 8px rgba(255, 193, 7, 0.4));
+  }
+
+  .renewal-text {
+    font-size: 1.3rem;
+    color: #26a69a;
+    line-height: 1.5;
+    text-align: left;
+
+    strong {
+      color: #26a69a;
+      font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1.1rem;
+    }
+  }
+
+  .sympla-button {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 20px 64px !important;
+    box-shadow: 0 12px 32px rgba(183, 28, 28, 0.5);
+    transition: all 0.3s ease;
+    z-index: 1;
+    position: relative;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 40px rgba(183, 28, 28, 0.6);
+      background-color: #c62828 !important;
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
+      padding: 16px 40px !important;
+    }
   }
 
   .benefits-section {
