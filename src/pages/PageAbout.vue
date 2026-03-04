@@ -74,13 +74,13 @@
           Nossa Equipe
         </div>
 
-        <!-- Diretoria Atual -->
+        <!-- Coordenação Geral -->
         <div class="team-subsection q-mb-xl">
           <div class="subsection-header q-pa-md q-mb-lg">
-            <div class="text-h5 text-weight-bold text-center">DIRETORIA ATUAL</div>
+            <div class="text-h5 text-weight-bold text-center">COORDENAÇÃO GERAL</div>
           </div>
           <div class="row q-col-gutter-lg justify-center">
-            <div class="col-12 col-sm-6 col-lg-4" v-for="(member, index) in members" :key="index">
+            <div class="col-12 col-sm-6 col-lg-4" v-for="(member, index) in coordGeralMembers" :key="index">
               <div class="member-card q-pa-md">
                 <div class="member-photo-container q-mb-md">
                   <q-img :src="`/img/Id/${member.image}`" spinner-color="primary" :spinner-size="spinnerSize"
@@ -102,38 +102,107 @@
             <div class="text-h5 text-weight-bold text-center">COORDENAÇÃO DE COMUNICAÇÃO</div>
           </div>
           <div class="row q-col-gutter-lg justify-center">
-            <div class="col-12 col-sm-6 col-lg-4" v-for="(commCoord, index) in communicationCoords" :key="index">
+            <div class="col-12 col-sm-6 col-lg-4" v-for="(member, index) in coordComunicacaoMembers" :key="index">
               <div class="member-card q-pa-md">
                 <div class="member-photo-container q-mb-md">
-                  <q-img :src="`/img/Id/${commCoord.image}`" spinner-color="primary" :spinner-size="spinnerSize"
+                  <q-img :src="`/img/Id/${member.image}`" spinner-color="primary" :spinner-size="spinnerSize"
                     class="member-photo" width="100px" height="100px" fit="cover" />
                 </div>
                 <div class="member-info text-center">
-                  <div class="member-name text-weight-bold q-mb-xs">{{ commCoord.name }}</div>
-                  <div class="member-crp text-caption q-mb-xs">{{ commCoord.crp }}</div>
-                  <div class="member-role text-body2 text-weight-medium">{{ commCoord.role }}</div>
+                  <div class="member-name text-weight-bold q-mb-xs">{{ member.name }}</div>
+                  <div class="member-crp text-caption q-mb-xs">{{ member.crp }}</div>
+                  <div class="member-role text-body2 text-weight-medium">{{ member.role }}</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Adjuntos e Adjuntas -->
+        <!-- Coordenação Administrativa -->
         <div class="team-subsection q-mb-xl">
           <div class="subsection-header q-pa-md q-mb-lg">
-            <div class="text-h5 text-weight-bold text-center">ADJUNTOS E ADJUNTAS</div>
+            <div class="text-h5 text-weight-bold text-center">COORDENAÇÃO ADMINISTRATIVA</div>
           </div>
           <div class="row q-col-gutter-lg justify-center">
-            <div class="col-12 col-sm-6 col-lg-4" v-for="(adjunct, index) in adjuncts" :key="index">
+            <div class="col-12 col-sm-6 col-lg-4" v-for="(member, index) in coordAdminMembers" :key="index">
               <div class="member-card q-pa-md">
                 <div class="member-photo-container q-mb-md">
-                  <q-img :src="`/img/Id/${adjunct.image}`" spinner-color="primary" :spinner-size="spinnerSize"
+                  <q-img :src="`/img/Id/${member.image}`" spinner-color="primary" :spinner-size="spinnerSize"
                     class="member-photo" width="100px" height="100px" fit="cover" />
                 </div>
                 <div class="member-info text-center">
-                  <div class="member-name text-weight-bold q-mb-xs">{{ adjunct.name }}</div>
-                  <div class="member-crp text-caption q-mb-xs">{{ adjunct.crp }}</div>
-                  <div class="member-role text-body2 text-weight-medium">{{ adjunct.role }}</div>
+                  <div class="member-name text-weight-bold q-mb-xs">{{ member.name }}</div>
+                  <div class="member-crp text-caption q-mb-xs">{{ member.crp }}</div>
+                  <div class="member-role text-body2 text-weight-medium">{{ member.role }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coordenação de Políticas -->
+        <div class="team-subsection q-mb-xl">
+          <div class="subsection-header q-pa-md q-mb-lg">
+            <div class="text-h5 text-weight-bold text-center">COORDENAÇÃO DE POLÍTICAS</div>
+          </div>
+          <div class="row q-col-gutter-lg justify-center">
+            <div class="col-12 col-sm-6 col-lg-4" v-for="(member, index) in coordPoliticasMembers" :key="index">
+              <div class="member-card q-pa-md">
+                <div class="member-photo-container q-mb-md">
+                  <q-img :src="`/img/Id/${member.image}`" spinner-color="primary" :spinner-size="spinnerSize"
+                    class="member-photo" width="100px" height="100px" fit="cover" />
+                </div>
+                <div class="member-info text-center">
+                  <div class="member-name text-weight-bold q-mb-xs">{{ member.name }}</div>
+                  <div class="member-crp text-caption q-mb-xs">{{ member.crp }}</div>
+                  <div class="member-role text-body2 text-weight-medium">{{ member.role }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coordenação de Formação -->
+        <div class="team-subsection q-mb-xl">
+          <div class="subsection-header q-pa-md q-mb-lg">
+            <div class="text-h5 text-weight-bold text-center">COORDENAÇÃO DE FORMAÇÃO</div>
+          </div>
+          <div class="row q-col-gutter-lg justify-center">
+            <div class="col-12 col-sm-6 col-lg-4" v-for="(member, index) in coordFormacaoMembers" :key="index">
+              <div class="member-card q-pa-md">
+                <div class="member-photo-container q-mb-md">
+                  <q-img :src="`/img/Id/${member.image}`" spinner-color="primary" :spinner-size="spinnerSize"
+                    class="member-photo" width="100px" height="100px" fit="cover" />
+                </div>
+                <div class="member-info text-center">
+                  <div class="member-name text-weight-bold q-mb-xs">{{ member.name }}</div>
+                  <div class="member-crp text-caption q-mb-xs">{{ member.crp }}</div>
+                  <div class="member-role text-body2 text-weight-medium">{{ member.role }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Suplente da Coordenação Geral -->
+        <div class="team-subsection q-mb-xl">
+          <div class="subsection-header q-pa-md q-mb-lg">
+            <div class="text-h5 text-weight-bold text-center">SUPLENTE DA COORDENAÇÃO GERAL</div>
+          </div>
+          <div class="row q-col-gutter-lg justify-center">
+            <div class="col-12 col-sm-6 col-md-4" v-for="(member, index) in suplenteGeralMembers" :key="index">
+              <div class="member-card q-pa-md">
+                <div class="member-photo-container q-mb-md">
+                  <q-img v-if="member.image" :src="`/img/Id/${member.image}`" spinner-color="primary"
+                    :spinner-size="spinnerSize" class="member-photo" width="100px" height="100px" fit="cover" />
+                  <div v-else class="member-photo-placeholder">
+                    <q-icon name="person" size="48px" color="grey-6" />
+                  </div>
+                </div>
+                <div class="member-info text-center">
+                  <div class="member-name text-weight-bold q-mb-xs">{{ member.name }}</div>
+                  <div class="member-crp text-caption q-mb-xs">{{ member.crp }}</div>
+                  <div class="member-role text-body2 text-weight-medium" v-if="member.role">{{ member.role }}</div>
                 </div>
               </div>
             </div>
@@ -141,7 +210,7 @@
         </div>
 
         <!-- Conselho Fiscal -->
-        <div class="team-subsection q-mb-xl">
+        <div class="team-subsection">
           <div class="subsection-header q-pa-md q-mb-lg">
             <div class="text-h5 text-weight-bold text-center">CONSELHO FISCAL</div>
           </div>
@@ -163,30 +232,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Suplentes -->
-        <div class="team-subsection">
-          <div class="subsection-header q-pa-md q-mb-lg">
-            <div class="text-h5 text-weight-bold text-center">SUPLENTES</div>
-          </div>
-          <div class="row q-col-gutter-lg justify-center">
-            <div class="col-12 col-sm-6 col-md-4" v-for="(substitute, index) in substitutes" :key="index">
-              <div class="member-card q-pa-md">
-                <div class="member-photo-container q-mb-md">
-                  <q-img v-if="substitute.image" :src="`/img/Id/${substitute.image}`" spinner-color="primary"
-                    :spinner-size="spinnerSize" class="member-photo" width="100px" height="100px" fit="cover" />
-                  <div v-else class="member-photo-placeholder">
-                    <q-icon name="person" size="48px" color="grey-6" />
-                  </div>
-                </div>
-                <div class="member-info text-center">
-                  <div class="member-name text-weight-bold q-mb-xs">{{ substitute.name }}</div>
-                  <div class="member-crp text-caption">{{ substitute.crp }}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   </q-page>
@@ -201,31 +246,34 @@
 
   const spinnerSize = ref('32px')
 
-  const members = ref([
-    // {
-    //   name: 'Fernando Pinto',
-    //   crp: '(CRP 11/11607)',
-    //   role: 'Coordenação Administrativa',
-    //   image: 'Fernando.JPG'
-    // },
+  const coordGeralMembers = ref([
+    {
+      name: 'Claudemir Campos',
+      crp: '(CRP 11/14061)',
+      role: 'Coordenação Geral',
+      image: 'Claudemi.JPG'
+    }
+  ])
+
+  const coordComunicacaoMembers = ref([
+    {
+      name: 'Fernando de Oliveira',
+      crp: '(CRP 11/11607)',
+      role: 'Coordenação de Comunicação',
+      image: 'Fernando.JPG'
+    }
+  ])
+
+  const coordAdminMembers = ref([
     {
       name: 'Rozelir Lima',
       crp: '(CRP 11/18978)',
       role: 'Coordenação Administrativa',
       image: 'Rozelir.JPG'
-    },
-    // {
-    //   name: 'Jannayna Queiroz',
-    //   crp: '(CRP 11/05087)',
-    //   role: 'Coordenação de Formação',
-    //   image: 'Jannayna.JPG'
-    // },
-    {
-      name: 'Walesson Castro',
-      crp: '(CRP 11/13625)',
-      role: 'Coordenação de Políticas Públicas',
-      image: 'Ant_Walesson.PNG'
-    },
+    }
+  ])
+
+  const coordPoliticasMembers = ref([
     {
       name: 'Jorge Luiz',
       crp: '(CRP 11/08046)',
@@ -234,48 +282,25 @@
     }
   ])
 
-  const communicationCoords = ref([
+  const coordFormacaoMembers = ref([
     {
-      name: 'Claudemi Campos',
-      crp: '(CRP 11/14061)',
-      role: 'Coordenação Geral',
-      image: 'Claudemi.JPG'
-    },
-    {
-      name: 'Karen Crisostomo',
-      crp: '(CRP 11/13272)',
-      role: 'Coordenação de Comunicação',
-      image: 'Karen.PNG'
+      name: 'Antonio Walesson',
+      crp: '(CRP 11/13625)',
+      role: 'Coordenação de Formação',
+      image: 'Ant_Walesson.PNG'
     }
   ])
 
-  const adjuncts = ref([
+  const suplenteGeralMembers = ref([
     {
       name: 'Helena Oliveira',
       crp: '(CRP 11/14909)',
-      role: 'Coordenação Geral',
+      role: 'Suplente da Coordenação Geral',
       image: 'Fca_Helena.JPG'
-    },
-    {
-      name: 'Elisângela Chagas',
-      crp: '(CRP 11/10712)',
-      role: 'Coordenação de Comunicação',
-      image: 'Elisangela.PNG'
-    },
-    {
-      name: 'Gisele Peixoto',
-      crp: '(CRP 11/2194)',
-      role: 'Coordenação de Formação',
-      image: 'Gisele.PNG'
     }
   ])
 
   const councilMembers = ref([
-    // {
-    //   name: 'Meire Viana',
-    //   crp: '(CRP 11/00919)',
-    //   image: 'Meire.PNG'
-    // },
     {
       name: 'Ivan Nogueira',
       crp: '(CRP 11/15086)',
@@ -284,14 +309,6 @@
     {
       name: 'Fúlvio Robert',
       crp: '(CRP 11/03494)',
-      image: ''
-    }
-  ])
-
-  const substitutes = ref([
-    {
-      name: 'Priscila Araújo',
-      crp: '(CRP 11/07998)',
       image: ''
     }
   ])
