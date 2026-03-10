@@ -5,29 +5,30 @@ pushd %~dp0
 REM Prepend local nodejs to PATH
 set PATH=%~dp0nodejs;%PATH%
 
-@REM echo Building project with Quasar...
-@REM nodejs\pnpm.cmd run build
+if exist "dist\spa" (
+    rmdir /s /q "dist\spa" 2>nul
+    if exist "dist\spa" (
+        echo Error: dist\spa is locked by another process.
+        echo Close Explorer previews, dev servers, terminals or sync tools using this folder and run again.
+        popd
+        pause
+        exit /b 1
+    )
+)
 
-@REM if errorlevel 1 (
-@REM     echo Quasar build failed. Aborting deployment.
-@REM     popd
-@REM     pause
-@REM     exit /b 1
-@REM )
+echo Building project with Quasar (SPA)...
+nodejs\pnpm.cmd run build -m spa
 
-@REM echo.
-@REM echo Build completed successfully!
-@REM echo.
+if errorlevel 1 (
+    echo Quasar build failed. Aborting deployment.
+    popd
+    pause
+    exit /b 1
+)
 
-@REM REM Check if dist/spa directory exists
-@REM if not exist "dist\spa" (
-@REM     echo Error: dist\spa directory not found. Make sure the build completed successfully.
-@REM     popd
-@REM     pause
-@REM     exit /b 1
-@REM )
-
-@REM )
+echo.
+echo Build completed successfully.
+echo.
 
 echo Deploying to Vercel...
 echo.

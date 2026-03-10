@@ -6,6 +6,8 @@ nodejs
 # Quasar core related directories
 .quasar
 /dist
+/deploy-package
+deploy-package.zip
 /quasar.config.*.temporary.compiled*
 
 # Cordova related directories and files
