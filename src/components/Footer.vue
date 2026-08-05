@@ -4,30 +4,10 @@
       CONTATO
     </div>
 
-    <q-btn
-      v-for="(link, index) in socialLinks"
-      :key="index"
-      dense round flat
-      color="none"
-      @click="onClickButton(link.url, '_blank')"
-      class="svg-icon"
-    >
-      <q-img
-        v-if="link.icon.includes('svg')"
-        :src="link.icon"
-        spinner-color="primary"
-        spinner-size="2em"
-        style="width: 2.25em"
-      />
+    <q-btn v-for="(link, index) in socialLinks" :key="index" dense round flat color="none" @click="onClickButton(link.url, '_blank')" class="svg-icon">
+      <q-img v-if="link.icon.includes('svg')" :src="link.icon" spinner-color="primary" spinner-size="2em" style="width: 2.25em" />
       <q-icon v-else :name="link.icon" />
-      <q-tooltip
-      	transition-show="fade"
-      	transition-hide="fade"
-      	transition-duration="300"
-        self="bottom middle"
-        :offset="[0, 24]"
-      	class="bg-transparent text-grey-8"
-      >
+      <q-tooltip transition-show="fade" transition-hide="fade" transition-duration="300" self="bottom middle" :offset="[0, 24]" class="bg-transparent text-grey-8">
         {{ link.label }}
       </q-tooltip>
     </q-btn>
@@ -46,22 +26,22 @@
   const socialLinks = ref([
     {
       label: 'Facebook',
-      icon: 'icons/o_facebook.svg',
+      icon: 'img/icons/o_facebook.svg',
       url: 'https://www.facebook.com/psindce',
     },
     {
       label: 'Instagram',
-      icon: 'icons/o_instagram.svg',
+      icon: 'img/icons/o_instagram.svg',
       url: 'https://www.instagram.com/psindce_/',
     },
     {
       label: 'Twitter/X',
-      icon: 'icons/o_x.svg',
+      icon: 'img/icons/o_x.svg',
       url: 'https://x.com/psindce',
     },
     {
       label: 'WhatsApp',
-      icon: 'icons/o_whatsapp.svg',
+      icon: 'img/icons/o_whatsapp.svg',
       url: 'https://wa.me/5585994201310',
     },
     {
@@ -82,7 +62,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .svg-icon  {
+  .svg-icon {
     opacity: 0.75;
 
     &:hover {

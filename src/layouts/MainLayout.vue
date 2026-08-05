@@ -13,8 +13,7 @@
           /> -->
 
           <q-toolbar-title class="q-py-sm row items-center">
-            <q-img src="icons/Logo-double-02b1.svg" spinner-color="primary" spinner-size="20px"
-              style="width: 64px; filter:brightness(1.25)" class="q-ml-lg" />
+            <q-img src="img/icons/Logo-double-02b1.svg" spinner-color="primary" spinner-size="20px" style="width: 64px; filter:brightness(1.25)" class="q-ml-lg" />
             <span class="text-h5 text-grey-4 text-bold text-italic text-shadow">
               PSINDCE
             </span>

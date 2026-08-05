@@ -6,7 +6,7 @@
   import { useQuasar } from 'quasar'
 
   const myIcons = {
-    'app:callcenter': 'img:/icons/call-center-2-svgrepo-com.svg',
+    'app:callcenter': 'img:/img/icons/call-center-2-svgrepo-com.svg',
   }
 
   const $q = useQuasar()

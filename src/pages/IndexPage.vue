@@ -7,7 +7,7 @@
           <div class="col-12 col-md-10 col-lg-8">
             <div class="text-center q-mb-lg">
               <div class="row no-wrap items-center justify-center q-mb-md">
-                <img src="icons/Logo-double-02b1.svg" style="width: 120px;" class="q-mr-md">
+                <img src="img/icons/Logo-double-02b1.svg" style="width: 120px;" class="q-mr-md">
                 <div class="text-h2 text-bold text-italic text-shadow1">
                   PSINDCE
                 </div>
