@@ -33,7 +33,7 @@ Apache-specific font MIME and cache headers are provided by `public/.htaccess`, 
 - `verify-host-fonts.ps1`: compare SHA256 and size between local `dist/spa/assets` fonts and the live host URLs.
 
 `public/.htaccess` is copied automatically to `dist/spa/.htaccess` during build.
-For KingHost, prefer uploading `deploy-package.zip` and extracting on server (or force FTP binary mode) to avoid font corruption during transfer.
+The font verifier targets `https://psindce.org.br` by default. For KingHost, prefer uploading `deploy-package.zip` and extracting it on the server, or force FTP binary mode, to avoid font corruption during transfer.
 
 ### Customize the configuration
 See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).

@@ -1,5 +1,5 @@
 param(
-  [string]$BaseUrl = "https://www.psindce.org.br/v2"
+  [string]$BaseUrl = "https://psindce.org.br"
 )
 
 $ErrorActionPreference = "Stop"
@@ -29,20 +29,23 @@ foreach ($file in $targets) {
   $url = "$BaseUrl/assets/$file"
 
   try {
-    Invoke-WebRequest -Uri $url -OutFile $tmpPath
+    Invoke-WebRequest -Uri $url -OutFile $tmpPath -UseBasicParsing
 
     $localHash = (Get-FileHash $localPath -Algorithm SHA256).Hash
     $remoteHash = (Get-FileHash $tmpPath -Algorithm SHA256).Hash
     $localSize = (Get-Item $localPath).Length
     $remoteSize = (Get-Item $tmpPath).Length
+    $localSignature = [BitConverter]::ToString([IO.File]::ReadAllBytes($localPath)[0..3])
+    $remoteSignature = [BitConverter]::ToString([IO.File]::ReadAllBytes($tmpPath)[0..3])
 
-    if ($localHash -eq $remoteHash) {
+    if (($localHash -eq $remoteHash) -and ($localSignature -in @('77-4F-46-46', '77-4F-46-32')) -and ($remoteSignature -eq $localSignature)) {
       Write-Host "OK: $file ($localSize bytes)" -ForegroundColor Green
     }
     else {
       Write-Host "MISMATCH: $file" -ForegroundColor Red
       Write-Host "  local : $localHash ($localSize bytes)"
       Write-Host "  remote: $remoteHash ($remoteSize bytes)"
+      Write-Host "  signatures: local $localSignature, remote $remoteSignature"
       $allOk = $false
     }
   }
