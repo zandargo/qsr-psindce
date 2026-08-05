@@ -9,8 +9,47 @@
 // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js
 
 
-const { configure } = require('quasar/wrappers');
-const path = require('path');
+const { configure } = require('quasar/wrappers')
+const fs = require('fs')
+const path = require('path')
+
+function normalizeSpaOutputPaths(distDir) {
+  const indexFile = path.join(distDir, 'index.html')
+
+  if (fs.existsSync(indexFile) === true) {
+    const html = fs.readFileSync(indexFile, 'utf8')
+      .replace(/((?:href|src)=['"])\/(?:\.\/)?assets\//g, '$1assets/')
+      .replace(/((?:href|src)=['"])\/(?:\.\/)?icons\//g, '$1icons/')
+      .replace(/((?:href|src)=['"])\/(?:\.\/)?favicon\.ico/g, '$1favicon.ico')
+
+    fs.writeFileSync(indexFile, html, 'utf8')
+  }
+
+  const assetsDir = path.join(distDir, 'assets')
+
+  if (fs.existsSync(assetsDir) === false) {
+    return
+  }
+
+  for (const fileName of fs.readdirSync(assetsDir)) {
+    const filePath = path.join(assetsDir, fileName)
+
+    if (fileName.endsWith('.css') === true) {
+      const css = fs.readFileSync(filePath, 'utf8')
+        .replace(/url\(\/(?:\.\/)?assets\//g, 'url(./')
+
+      fs.writeFileSync(filePath, css, 'utf8')
+      continue
+    }
+
+    if (fileName.endsWith('.js') === true) {
+      const js = fs.readFileSync(filePath, 'utf8')
+        .replace(/([,{])fl="\/"/g, '$1fl=""')
+
+      fs.writeFileSync(filePath, js, 'utf8')
+    }
+  }
+}
 
 module.exports = configure(function (ctx) {
   return {
@@ -47,7 +86,7 @@ module.exports = configure(function (ctx) {
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#build
     build: {
       target: {
-        browser: [ 'es2019', 'edge88', 'firefox78', 'chrome87', 'safari13.1' ],
+        browser: ['es2019', 'edge88', 'firefox78', 'chrome87', 'safari13.1'],
         node: 'node20'
       },
 
@@ -58,7 +97,6 @@ module.exports = configure(function (ctx) {
 
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
 
-      // publicPath: '/',
       // analyze: true,
       // env: {},
       // rawDefine: {}
@@ -66,6 +104,19 @@ module.exports = configure(function (ctx) {
       // minify: false,
       // polyfillModulePreload: true,
       // distDir
+
+      afterBuild({ quasarConf }) {
+        if (ctx.mode.spa === true) {
+          normalizeSpaOutputPaths(quasarConf.build.distDir)
+
+          const sourceHtaccess = path.join(__dirname, 'public', '.htaccess')
+          const targetHtaccess = path.join(quasarConf.build.distDir, '.htaccess')
+
+          if (fs.existsSync(sourceHtaccess) === true) {
+            fs.copyFileSync(sourceHtaccess, targetHtaccess)
+          }
+        }
+      },
 
       // extendViteConf (viteConf) {},
       // viteVuePluginOptions: {},
@@ -133,7 +184,7 @@ module.exports = configure(function (ctx) {
     // https://v2.quasar.dev/quasar-cli-vite/developing-ssr/configuring-ssr
     ssr: {
       // ssrPwaHtmlFilename: 'offline.html', // do NOT use index.html as name!
-                                          // will mess up SSR
+      // will mess up SSR
 
       // extendSSRWebserverConf (esbuildConf) {},
       // extendPackageJson (json) {},
@@ -144,7 +195,7 @@ module.exports = configure(function (ctx) {
       // manualPostHydrationTrigger: true,
 
       prodPort: 3000, // The default port that the production server should use
-                      // (gets superseded if process.env.PORT is specified at runtime)
+      // (gets superseded if process.env.PORT is specified at runtime)
 
       middlewares: [
         'render' // keep this as last one
@@ -215,4 +266,4 @@ module.exports = configure(function (ctx) {
       // extendBexManifestJson (json) {}
     }
   }
-});
+})

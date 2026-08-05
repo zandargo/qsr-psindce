@@ -4,6 +4,10 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # Never rewrite static assets to index.html.
+  RewriteCond %{REQUEST_URI} \.(?:css|js|mjs|map|json|png|jpg|jpeg|gif|svg|webp|ico|woff|woff2|ttf|eot|otf)$ [NC]
+  RewriteRule ^ - [L]
+
   # If the request points to a real file/folder, serve it directly.
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
@@ -13,7 +17,27 @@
   RewriteRule ^ index.html [L]
 </IfModule>
 
+# Explicit MIME types for font files (required on some Apache configurations).
+<IfModule mod_mime.c>
+  AddType font/woff                    .woff
+  AddType font/woff2                   .woff2
+  AddType application/x-font-ttf      .ttf
+  AddType application/vnd.ms-fontobject .eot
+  AddType image/svg+xml               .svg
+</IfModule>
+
+# Some Apache stacks corrupt font payloads when gzip is forced.
+<IfModule mod_deflate.c>
+  SetEnvIfNoCase Request_URI "\.(?:woff|woff2|ttf|eot|otf)$" no-gzip dont-vary
+</IfModule>
+
 <IfModule mod_headers.c>
+  # Allow fonts to be loaded cross-origin (fixes icon fonts on Apache hosts).
+  <FilesMatch "\.(woff|woff2|ttf|eot|svg)$">
+    Header set Access-Control-Allow-Origin "*"
+    Header set X-Content-Type-Options "nosniff"
+  </FilesMatch>
+
   # Always fetch latest HTML so deployments show up immediately.
   <FilesMatch "\.(html)$">
     Header set Cache-Control "no-cache, no-store, must-revalidate"

@@ -19,7 +19,7 @@ if exist "dist\spa" (
 if exist "deploy-package" rmdir /s /q "deploy-package"
 
 echo Building project with Quasar (SPA)...
-nodejs\pnpm.cmd run build -m spa
+call nodejs\pnpm.cmd run build -m spa
 
 if errorlevel 1 (
     echo Quasar build failed. Aborting package generation.
@@ -46,6 +46,22 @@ robocopy "dist\spa" "deploy-package" /E >nul
 
 if errorlevel 8 (
     echo Failed to copy build output to deploy-package.
+    popd
+    pause
+    exit /b 1
+)
+
+if not exist "deploy-package\icons\favicon-32x32.png" (
+    echo Error: deploy-package\icons\favicon-32x32.png is missing.
+    echo The complete deploy-package folder must be uploaded, including the icons folder.
+    popd
+    pause
+    exit /b 1
+)
+
+if not exist "deploy-package\icons\Logo-double-02b1.svg" (
+    echo Error: deploy-package\icons\Logo-double-02b1.svg is missing.
+    echo The complete deploy-package folder must be uploaded, including the icons folder.
     popd
     pause
     exit /b 1

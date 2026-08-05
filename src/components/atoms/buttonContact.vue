@@ -37,7 +37,7 @@
       >
        <template v-slot:icon>
         <q-img
-        	src="/icons/whatsapp-logo.svg"
+          	src="icons/whatsapp-logo.svg"
         	spinner-color="white"
         	spinner-size="2em"
         	style="width: 2.85em"
@@ -53,7 +53,7 @@
       >
        <template v-slot:icon>
         <q-img
-        	src="/icons/X_Logo.svg"
+          	src="icons/X_Logo.svg"
         	spinner-color="white"
         	spinner-size="2em"
         	style="width: 2.5em"
@@ -69,7 +69,7 @@
       >
        <template v-slot:icon>
         <q-img
-        	src="/icons/instagram.svg"
+          	src="icons/instagram.svg"
         	spinner-color="white"
         	spinner-size="2em"
         	style="width: 3.15em"
@@ -85,7 +85,7 @@
       >
        <template v-slot:icon>
         <q-img
-        	src="/icons/facebook.svg"
+          	src="icons/facebook.svg"
         	spinner-color="white"
         	spinner-size="2em"
         	style="width: 2.85em"

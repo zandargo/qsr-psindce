@@ -46,22 +46,22 @@
   const socialLinks = ref([
     {
       label: 'Facebook',
-      icon: '/icons/o_facebook.svg',
+      icon: 'icons/o_facebook.svg',
       url: 'https://www.facebook.com/psindce',
     },
     {
       label: 'Instagram',
-      icon: '/icons/o_instagram.svg',
+      icon: 'icons/o_instagram.svg',
       url: 'https://www.instagram.com/psindce_/',
     },
     {
       label: 'Twitter/X',
-      icon: '/icons/o_x.svg',
+      icon: 'icons/o_x.svg',
       url: 'https://x.com/psindce',
     },
     {
       label: 'WhatsApp',
-      icon: '/icons/o_whatsapp.svg',
+      icon: 'icons/o_whatsapp.svg',
       url: 'https://wa.me/5585994201310',
     },
     {
