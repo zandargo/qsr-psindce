@@ -83,8 +83,7 @@
             <div class="col-12 col-sm-6 col-lg-4" v-for="(member, index) in coordGeralMembers" :key="index">
               <div class="member-card q-pa-md">
                 <div class="member-photo-container q-mb-md">
-                  <q-img :src="`/img/Id/${member.image}`" spinner-color="primary" :spinner-size="spinnerSize"
-                    class="member-photo" width="100px" height="100px" fit="cover" />
+                  <q-img :src="`/img/Id/${member.image}`" spinner-color="primary" :spinner-size="spinnerSize" class="member-photo" width="100px" height="100px" fit="cover" />
                 </div>
                 <div class="member-info text-center">
                   <div class="member-name text-weight-bold q-mb-xs">{{ member.name }}</div>
@@ -105,8 +104,7 @@
             <div class="col-12 col-sm-6 col-lg-4" v-for="(member, index) in coordComunicacaoMembers" :key="index">
               <div class="member-card q-pa-md">
                 <div class="member-photo-container q-mb-md">
-                  <q-img :src="`/img/Id/${member.image}`" spinner-color="primary" :spinner-size="spinnerSize"
-                    class="member-photo" width="100px" height="100px" fit="cover" />
+                  <q-img :src="`/img/Id/${member.image}`" spinner-color="primary" :spinner-size="spinnerSize" class="member-photo" width="100px" height="100px" fit="cover" />
                 </div>
                 <div class="member-info text-center">
                   <div class="member-name text-weight-bold q-mb-xs">{{ member.name }}</div>
@@ -127,8 +125,7 @@
             <div class="col-12 col-sm-6 col-lg-4" v-for="(member, index) in coordAdminMembers" :key="index">
               <div class="member-card q-pa-md">
                 <div class="member-photo-container q-mb-md">
-                  <q-img :src="`/img/Id/${member.image}`" spinner-color="primary" :spinner-size="spinnerSize"
-                    class="member-photo" width="100px" height="100px" fit="cover" />
+                  <q-img :src="`/img/Id/${member.image}`" spinner-color="primary" :spinner-size="spinnerSize" class="member-photo" width="100px" height="100px" fit="cover" />
                 </div>
                 <div class="member-info text-center">
                   <div class="member-name text-weight-bold q-mb-xs">{{ member.name }}</div>
@@ -149,8 +146,7 @@
             <div class="col-12 col-sm-6 col-lg-4" v-for="(member, index) in coordPoliticasMembers" :key="index">
               <div class="member-card q-pa-md">
                 <div class="member-photo-container q-mb-md">
-                  <q-img :src="`/img/Id/${member.image}`" spinner-color="primary" :spinner-size="spinnerSize"
-                    class="member-photo" width="100px" height="100px" fit="cover" />
+                  <q-img :src="`/img/Id/${member.image}`" spinner-color="primary" :spinner-size="spinnerSize" class="member-photo" width="100px" height="100px" fit="cover" />
                 </div>
                 <div class="member-info text-center">
                   <div class="member-name text-weight-bold q-mb-xs">{{ member.name }}</div>
@@ -171,8 +167,7 @@
             <div class="col-12 col-sm-6 col-lg-4" v-for="(member, index) in coordFormacaoMembers" :key="index">
               <div class="member-card q-pa-md">
                 <div class="member-photo-container q-mb-md">
-                  <q-img :src="`/img/Id/${member.image}`" spinner-color="primary" :spinner-size="spinnerSize"
-                    class="member-photo" width="100px" height="100px" fit="cover" />
+                  <q-img :src="`/img/Id/${member.image}`" spinner-color="primary" :spinner-size="spinnerSize" class="member-photo" width="100px" height="100px" fit="cover" />
                 </div>
                 <div class="member-info text-center">
                   <div class="member-name text-weight-bold q-mb-xs">{{ member.name }}</div>
@@ -193,10 +188,9 @@
             <div class="col-12 col-sm-6 col-md-4" v-for="(member, index) in suplenteGeralMembers" :key="index">
               <div class="member-card q-pa-md">
                 <div class="member-photo-container q-mb-md">
-                  <q-img v-if="member.image" :src="`/img/Id/${member.image}`" spinner-color="primary"
-                    :spinner-size="spinnerSize" class="member-photo" width="100px" height="100px" fit="cover" />
+                  <q-img v-if="member.image" :src="`/img/Id/${member.image}`" spinner-color="primary" :spinner-size="spinnerSize" class="member-photo" width="100px" height="100px" fit="cover" />
                   <div v-else class="member-photo-placeholder">
-                    <q-icon name="person" size="48px" color="grey-6" />
+                    <q-icon :name="matPerson" size="48px" color="grey-6" />
                   </div>
                 </div>
                 <div class="member-info text-center">
@@ -218,10 +212,9 @@
             <div class="col-12 col-sm-6 col-md-4" v-for="(council, index) in councilMembers" :key="index">
               <div class="member-card q-pa-md">
                 <div class="member-photo-container q-mb-md">
-                  <q-img v-if="council.image" :src="`/img/Id/${council.image}`" spinner-color="primary"
-                    :spinner-size="spinnerSize" class="member-photo" width="100px" height="100px" fit="cover" />
+                  <q-img v-if="council.image" :src="`/img/Id/${council.image}`" spinner-color="primary" :spinner-size="spinnerSize" class="member-photo" width="100px" height="100px" fit="cover" />
                   <div v-else class="member-photo-placeholder">
-                    <q-icon name="person" size="48px" color="grey-6" />
+                    <q-icon :name="matPerson" size="48px" color="grey-6" />
                   </div>
                 </div>
                 <div class="member-info text-center">

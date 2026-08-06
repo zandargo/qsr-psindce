@@ -44,7 +44,7 @@
             <div class="benefits-grid q-mb-xl">
               <div class="benefit-card q-pa-lg">
                 <div class="benefit-icon q-mb-md">
-                  <q-icon name="gavel" size="48px" color="teal-6" />
+                  <q-icon :name="matGavel" size="48px" color="teal-6" />
                 </div>
                 <div class="benefit-title text-h6 text-weight-bold q-mb-sm text-teal-8">
                   Assistência Jurídica Integral
@@ -60,7 +60,7 @@
 
               <div class="benefit-card q-pa-lg">
                 <div class="benefit-icon q-mb-md">
-                  <q-icon name="handshake" size="48px" color="teal-6" />
+                  <q-icon :name="matHandshake" size="48px" color="teal-6" />
                 </div>
                 <div class="benefit-title text-h6 text-weight-bold q-mb-sm text-teal-8">
                   Negociação Coletiva
@@ -73,7 +73,7 @@
 
               <div class="benefit-card q-pa-lg">
                 <div class="benefit-icon q-mb-md">
-                  <q-icon name="local_offer" size="48px" color="teal-6" />
+                  <q-icon :name="matLocalOffer" size="48px" color="teal-6" />
                 </div>
                 <div class="benefit-title text-h6 text-weight-bold q-mb-sm text-teal-8">
                   Convênios Exclusivos
@@ -185,8 +185,7 @@
             <div class="partners-grid q-mb-xl">
               <div class="partner-card q-pa-lg">
                 <div class="partner-logo q-mb-md">
-                  <q-img src="img/Logo_efc01.JPG" width="120px" spinner-color="primary" spinner-size="36px"
-                    class="partner-image" />
+                  <q-img src="img/Logo_efc01.JPG" width="120px" spinner-color="primary" spinner-size="36px" class="partner-image" />
                 </div>
                 <div class="partner-name text-weight-bold text-center">
                   EFC - Erinaldo Frederico Cruz
@@ -195,8 +194,7 @@
 
               <div class="partner-card q-pa-lg">
                 <div class="partner-logo q-mb-md">
-                  <q-img src="img/Logo_IP01.JPG" width="120px" spinner-color="primary" spinner-size="36px"
-                    class="partner-image" />
+                  <q-img src="img/Logo_IP01.JPG" width="120px" spinner-color="primary" spinner-size="36px" class="partner-image" />
                 </div>
                 <div class="partner-name text-weight-bold text-center">
                   Iarlly Plácido - Nutricionista
@@ -205,8 +203,7 @@
 
               <div class="partner-card q-pa-lg">
                 <div class="partner-logo q-mb-md">
-                  <q-img src="img/Logo_sesc.PNG" width="120px" spinner-color="primary" spinner-size="36px"
-                    class="partner-image" />
+                  <q-img src="img/Logo_sesc.PNG" width="120px" spinner-color="primary" spinner-size="36px" class="partner-image" />
                 </div>
                 <div class="partner-name text-weight-bold text-center">
                   SESC
@@ -215,8 +212,7 @@
 
               <div class="partner-card q-pa-lg">
                 <div class="partner-logo q-mb-md">
-                  <q-img src="img/LOGO_Crisalide.png" width="120px" spinner-color="primary" spinner-size="36px"
-                    class="partner-image" />
+                  <q-img src="img/LOGO_Crisalide.png" width="120px" spinner-color="primary" spinner-size="36px" class="partner-image" />
                 </div>
                 <div class="partner-name text-weight-bold text-center">
                   Instituto Crisalide
@@ -284,14 +280,14 @@
 
               <div class="renewal-benefits q-mb-xl">
                 <div class="renewal-item q-mb-lg">
-                  <q-icon name="check_circle" size="40px" color="amber-8" class="check-icon" />
+                  <q-icon :name="matCheckCircle" size="40px" color="amber-8" class="check-icon" />
                   <div class="renewal-text">
                     <strong>Anuidade renovada</strong> a cada ano
                   </div>
                 </div>
 
                 <div class="renewal-item q-mb-xl">
-                  <q-icon name="check_circle" size="40px" color="amber-8" class="check-icon" />
+                  <q-icon :name="matCheckCircle" size="40px" color="amber-8" class="check-icon" />
                   <div class="renewal-text">
                     <strong>Realize pagamento</strong> na plataforma <strong>Sympla</strong>
                   </div>
@@ -299,8 +295,7 @@
               </div>
 
               <div class="text-center">
-                <q-btn unelevated rounded size="xl" color="red-8" text-color="white" label="ACESSAR SYMPLA"
-                  class="sympla-button q-px-xl q-py-md" @click="openSymplaLink" icon-right="link" />
+                <q-btn unelevated rounded size="xl" color="red-8" text-color="white" label="ACESSAR SYMPLA" class="sympla-button q-px-xl q-py-md" @click="openSymplaLink" :icon-right="matLink" />
               </div>
             </div>
           </div>
@@ -311,6 +306,8 @@
 </template>
 
 <script setup>
+  import { matCheckCircle, matGavel, matHandshake, matLink, matLocalOffer } from 'assets/icons'
+
   defineOptions({
     name: 'PageJoin'
   })

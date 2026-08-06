@@ -7,7 +7,7 @@
             flat
             dense
             round
-            icon="menu"
+            :icon="matMenu"
             aria-label="Menu"
             @click="toggleLeftDrawer"
           /> -->
@@ -76,6 +76,7 @@
   import { useQuasar, getCssVar } from 'quasar'
   import ButtonContact from 'components/atoms/buttonContact.vue'
   import Footer from 'components/Footer.vue'
+  import { matMenu, matSchool } from 'assets/icons'
 
   const tab = ref('sobre')
   const scrollAreaRef = ref(null)
@@ -93,7 +94,7 @@
     {
       title: 'Docs',
       caption: 'quasar.dev',
-      icon: 'school',
+      icon: matSchool,
       link: 'https://quasar.dev'
     },
   ]

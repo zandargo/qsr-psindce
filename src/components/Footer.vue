@@ -22,6 +22,7 @@
 
 <script setup>
   import { ref } from 'vue'
+  import { fasMapLocationDot, matMail } from 'assets/icons'
 
   const socialLinks = ref([
     {
@@ -46,12 +47,12 @@
     },
     {
       label: 'Localização',
-      icon: 'fa-solid fa-map-location-dot',
+      icon: fasMapLocationDot,
       url: 'https://maps.app.goo.gl/gZ5P5Pv2Yqi8wiAy7',
     },
     {
       label: 'Email',
-      icon: 'mail',
+      icon: matMail,
       url: 'mailto:psindce@gmail.com',
     },
   ])

@@ -45,7 +45,7 @@
 						<div class="benefits-grid q-mb-xl">
 							<div class="benefit-card q-pa-lg">
 								<div class="benefit-icon q-mb-md">
-									<q-icon name="gavel" size="48px" color="teal-6" />
+									<q-icon :name="matGavel" size="48px" color="teal-6" />
 								</div>
 								<div class="benefit-title text-h6 text-weight-bold q-mb-sm text-teal-8">
 									Assistência Jurídica Integral
@@ -61,7 +61,7 @@
 
 							<div class="benefit-card q-pa-lg">
 								<div class="benefit-icon q-mb-md">
-									<q-icon name="handshake" size="48px" color="teal-6" />
+									<q-icon :name="matHandshake" size="48px" color="teal-6" />
 								</div>
 								<div class="benefit-title text-h6 text-weight-bold q-mb-sm text-teal-8">
 									Negociação Coletiva
@@ -75,7 +75,7 @@
 
 							<div class="benefit-card q-pa-lg">
 								<div class="benefit-icon q-mb-md">
-									<q-icon name="local_offer" size="48px" color="teal-6" />
+									<q-icon :name="matLocalOffer" size="48px" color="teal-6" />
 								</div>
 								<div class="benefit-title text-h6 text-weight-bold q-mb-sm text-teal-8">
 									Convênios Exclusivos
@@ -188,8 +188,7 @@
 						<div class="partners-grid q-mb-xl">
 							<div class="partner-card q-pa-lg">
 								<div class="partner-logo q-mb-md">
-									<q-img src="img/Logo_efc01.JPG" width="120px" spinner-color="primary" spinner-size="36px"
-										class="partner-image" />
+									<q-img src="img/Logo_efc01.JPG" width="120px" spinner-color="primary" spinner-size="36px" class="partner-image" />
 								</div>
 								<div class="partner-name text-weight-bold text-center">
 									EFC - Erinaldo Frederico Cruz
@@ -198,8 +197,7 @@
 
 							<div class="partner-card q-pa-lg">
 								<div class="partner-logo q-mb-md">
-									<q-img src="img/Logo_IP01.JPG" width="120px" spinner-color="primary" spinner-size="36px"
-										class="partner-image" />
+									<q-img src="img/Logo_IP01.JPG" width="120px" spinner-color="primary" spinner-size="36px" class="partner-image" />
 								</div>
 								<div class="partner-name text-weight-bold text-center">
 									Iarlly Plácido - Nutricionista
@@ -208,8 +206,7 @@
 
 							<div class="partner-card q-pa-lg">
 								<div class="partner-logo q-mb-md">
-									<q-img src="img/Logo_sesc.PNG" width="120px" spinner-color="primary" spinner-size="36px"
-										class="partner-image" />
+									<q-img src="img/Logo_sesc.PNG" width="120px" spinner-color="primary" spinner-size="36px" class="partner-image" />
 								</div>
 								<div class="partner-name text-weight-bold text-center">
 									SESC
@@ -218,8 +215,7 @@
 
 							<div class="partner-card q-pa-lg">
 								<div class="partner-logo q-mb-md">
-									<q-img src="img/LOGO_Crisalide.png" width="120px" spinner-color="primary" spinner-size="36px"
-										class="partner-image" />
+									<q-img src="img/LOGO_Crisalide.png" width="120px" spinner-color="primary" spinner-size="36px" class="partner-image" />
 								</div>
 								<div class="partner-name text-weight-bold text-center">
 									Instituto Crisalide
@@ -274,6 +270,8 @@
 </template>
 
 <script setup>
+	import { matGavel, matHandshake, matLocalOffer } from 'assets/icons'
+
 	defineOptions({
 		name: 'PageJoin'
 	})

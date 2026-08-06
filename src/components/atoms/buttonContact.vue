@@ -2,14 +2,14 @@
   <div>
     <q-fab direction="up" color="red-9" class="q-ma-lg" hide-icon padding="xs xs md none">
       <template v-slot:label="{ opened }">
-        <q-icon :class="{ 'example-fab-animate--hover': opened !== true }" name="support_agent" size="2.5em" />
+        <q-icon :class="{ 'example-fab-animate--hover': opened !== true }" :name="matSupportAgent" size="2.5em" />
       </template>
 
       <!--//* LOCALIZAÇÃO -->
-      <q-fab-action @click="onClickButton('https://maps.app.goo.gl/gZ5P5Pv2Yqi8wiAy7', '_blank')" color="primary" icon="fa-solid fa-map-location-dot" />
+      <q-fab-action @click="onClickButton('https://maps.app.goo.gl/gZ5P5Pv2Yqi8wiAy7', '_blank')" color="primary" :icon="fasMapLocationDot" />
 
       <!--//* EMAIL -->
-      <q-fab-action @click="onClickButton('mailto:psindce@gmail.com', '_blank')" color="primary" icon="mail" />
+      <q-fab-action @click="onClickButton('mailto:psindce@gmail.com', '_blank')" color="primary" :icon="matMail" />
 
       <!--//* WHATSAPP -->
       <q-fab-action @click="onClickButton('https://wa.me/5585994201310', '_blank')" color="none" class="q-pa-none">
@@ -46,6 +46,7 @@
 </template>
 
 <script setup>
+  import { fasMapLocationDot, matMail, matSupportAgent } from 'assets/icons'
 
   function onClickButton(link, target) {
     window.open(link, target)
