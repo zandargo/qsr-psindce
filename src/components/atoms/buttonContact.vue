@@ -1,6 +1,6 @@
 <template>
   <div>
-    <q-fab direction="up" color="red-9" class="q-ma-lg" hide-icon padding="xs xs md none">
+    <q-fab direction="up" color="red-9" class="contact-fab q-ma-lg" hide-icon padding="xs xs md none">
       <template v-slot:label="{ opened }">
         <q-icon :class="{ 'example-fab-animate--hover': opened !== true }" :name="matSupportAgent" size="2.5em" />
       </template>
@@ -55,6 +55,12 @@
 </script>
 
 <style lang="scss" scoped>
+  @media (max-width: 599px) {
+    .contact-fab {
+      margin: 12px;
+    }
+  }
+
   .invert-color {
     filter: invert(0.75);
   }

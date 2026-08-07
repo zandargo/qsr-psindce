@@ -7,10 +7,12 @@ $txt-primary: color.adjust($primary, $blackness: 80%);
   color: $txt-primary;
   font-size: 1.1rem;
 }
+
 .text-primary-12 {
   color: $txt-primary;
   font-size: 1.2rem;
 }
+
 // .text-primary-2 {
 //   color: $txt-primary;
 //   font-size: 1.2rem;
@@ -26,30 +28,43 @@ $txt-primary: color.adjust($primary, $blackness: 80%);
   // border-radius: 3px !important;
 
   background: linear-gradient(90deg,
-    color.adjust($red-9, $whiteness: 10%) 0%,
-    color.adjust($red-9, $blackness: 10%) 40%,
-    color.adjust($red-9, $blackness: 20%) 60%,
-    color.adjust($red-9, $blackness: 30%) 100%,
-  ) !important;
+      color.adjust($red-9, $whiteness: 10%) 0%,
+      color.adjust($red-9, $blackness: 10%) 40%,
+      color.adjust($red-9, $blackness: 20%) 60%,
+      color.adjust($red-9, $blackness: 30%) 100%,
+    ) !important;
 }
 
 
 .glossy-1 {
   background-color: $primary;
   background-image: linear-gradient(to bottom,
-    rgba(255, 255, 255, 0.10) 0%,
-    rgba(255, 255, 255, 0.01) 44%,
-    rgba(0, 0, 0, 0.01) 56%,
-    rgba(0, 0, 0, 0.05) 100%) !important;
+      rgba(255, 255, 255, 0.10) 0%,
+      rgba(255, 255, 255, 0.01) 44%,
+      rgba(0, 0, 0, 0.01) 56%,
+      rgba(0, 0, 0, 0.05) 100%) !important;
 }
 
 
-.flex-break {flex: 1 0 100% !important;}
+.flex-break {
+  flex: 1 0 100% !important;
+}
 
-.opacity-85 {opacity: 0.85;}
-.opacity-75 {opacity: 0.75;}
-.opacity-45 {opacity: 0.45;}
-.opacity-25 {opacity: 0.25;}
+.opacity-85 {
+  opacity: 0.85;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+.opacity-45 {
+  opacity: 0.45;
+}
+
+.opacity-25 {
+  opacity: 0.25;
+}
 
 
 .left-image {
@@ -71,11 +86,27 @@ $txt-primary: color.adjust($primary, $blackness: 80%);
   //   radial-gradient(circle, #0000 45%, #000f 48%),
   //   radial-gradient(ellipse farthest-corner, #fc1c14 20%, #cf15cf 80%);
 
-  background-image: linear-gradient( 108deg,
-    hsla(356, 80%, 80%, 0.2) 05%,
-    hsla(174, 80%, 72%, 0.4) 25%,
-    hsla(174, 80%, 72%, 0.4) 55%,
-    hsla(356, 80%, 80%, 0.2) 95%,
+  background-image: linear-gradient(108deg,
+      hsla(356, 80%, 80%, 0.2) 05%,
+      hsla(174, 80%, 72%, 0.4) 25%,
+      hsla(174, 80%, 72%, 0.4) 55%,
+      hsla(356, 80%, 80%, 0.2) 95%,
     );
 
+}
+
+.container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 599px) {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .q-page .q-pa-xl {
+    padding: 24px !important;
+  }
 }

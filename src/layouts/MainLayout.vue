@@ -1,35 +1,18 @@
 <template>
-  <q-scroll-area ref="scrollAreaRef" style="height: calc(100svh)" :thumb-style="thumbStyle">
+  <q-scroll-area ref="scrollAreaRef" class="layout-scroll" :thumb-style="thumbStyle">
     <q-layout view="hHh Lpr fFf">
       <q-header class="q-pb-sm bg-header">
         <q-toolbar>
-          <!-- <q-btn
-            flat
-            dense
-            round
-            :icon="matMenu"
-            aria-label="Menu"
-            @click="toggleLeftDrawer"
-          /> -->
+          <q-btn flat dense round :icon="matMenu" aria-label="Menu" @click="toggleLeftDrawer" class="lt-md" />
 
-          <q-toolbar-title class="q-py-sm row items-center">
-            <q-img src="img/icons/Logo-double-02b1.svg" spinner-color="primary" spinner-size="20px" style="width: 64px; filter:brightness(1.25)" class="q-ml-lg" />
-            <span class="text-h5 text-grey-4 text-bold text-italic text-shadow">
+          <q-toolbar-title class="q-py-sm row items-center no-wrap">
+            <q-img src="img/icons/Logo-double-02b1.svg" spinner-color="primary" spinner-size="20px" class="brand-logo q-mr-sm" />
+            <span class="text-h5 text-grey-4 text-bold text-italic text-shadow brand-name">
               PSINDCE
             </span>
           </q-toolbar-title>
 
-          <q-space />
-
-          <!-- <q-tabs v-model="tab" dense class="text-grey-1" active-color="green-5" indicator-color="primary"
-            align="justify" narrow-indicator active-class="">
-            <q-tab name="sobre" label="Sobre" />
-            <q-tab name="historia" label="História" />
-            <q-tab name="sindicalize" label="Sindicalize-se!" />
-          </q-tabs> -->
-          <q-tabs dense class="text-green-13" indicator-color="white" active-class="text-white" align="justify">
-            <!-- narrow-indicator -->
-            <!-- active-bg-color="red-2" -->
+          <q-tabs dense class="gt-sm text-green-13" indicator-color="white" active-class="text-white" align="justify">
             <q-route-tab label="Início" to="/" />
             <q-route-tab label="Sobre" to="/sobre" />
             <q-route-tab label="História" to="/historia" />
@@ -40,13 +23,20 @@
         </q-toolbar>
       </q-header>
 
-      <q-drawer v-model="leftDrawerOpen">
-        <q-list>
-          <q-item-label header>
-            Essential Links
-          </q-item-label>
-
-          <EssentialLink v-for="link in linksList" :key="link.title" v-bind="link" />
+      <q-drawer v-model="leftDrawerOpen" bordered behavior="mobile" class="lt-md app-drawer text-grey-3">
+        <q-list class="q-pa-sm">
+          <q-item clickable v-close-popup to="/" exact active-class="drawer-item-active" class="q-mb-xs rounded-borders drawer-item">
+            <q-item-section>Início</q-item-section>
+          </q-item>
+          <q-item clickable v-close-popup to="/sobre" active-class="drawer-item-active" class="q-mb-xs rounded-borders drawer-item">
+            <q-item-section>Sobre</q-item-section>
+          </q-item>
+          <q-item clickable v-close-popup to="/historia" active-class="drawer-item-active" class="q-mb-xs rounded-borders drawer-item">
+            <q-item-section>História</q-item-section>
+          </q-item>
+          <q-item clickable v-close-popup to="/afiliese" active-class="drawer-item-active" class="rounded-borders drawer-item">
+            <q-item-section>Sindicalize-se!</q-item-section>
+          </q-item>
         </q-list>
       </q-drawer>
 
@@ -72,13 +62,11 @@
 <script setup>
   import { ref, watch } from 'vue'
   import { useRoute } from 'vue-router'
-  import EssentialLink from 'components/EssentialLink.vue'
   import { useQuasar, getCssVar } from 'quasar'
   import ButtonContact from 'components/atoms/buttonContact.vue'
   import Footer from 'components/Footer.vue'
-  import { matMenu, matSchool } from 'assets/icons'
+  import { matMenu } from 'assets/icons'
 
-  const tab = ref('sobre')
   const scrollAreaRef = ref(null)
   const route = useRoute()
 
@@ -89,15 +77,6 @@
   defineOptions({
     name: 'MainLayout'
   })
-
-  const linksList = [
-    {
-      title: 'Docs',
-      caption: 'quasar.dev',
-      icon: matSchool,
-      link: 'https://quasar.dev'
-    },
-  ]
 
   const leftDrawerOpen = ref(false)
 
@@ -119,6 +98,29 @@
 
   .text-shadow {
     text-shadow: 2px 2px 8px #fff7;
+  }
+
+  .layout-scroll {
+    height: 100svh;
+  }
+
+  .brand-logo {
+    width: 64px;
+    filter: brightness(1.25);
+  }
+
+  @media (max-width: 599px) {
+    .brand-logo {
+      width: 48px;
+    }
+
+    .brand-name {
+      font-size: 1.25rem;
+    }
+
+    .q-toolbar {
+      min-height: 56px;
+    }
   }
 
   .text-shadow-tab {
@@ -150,6 +152,44 @@
         color.adjust($dark, $alpha: -0.5) 81%,
         color.adjust($dark, $alpha: -1.0) 99%,
       )
+  }
+
+  .app-drawer {
+    background: linear-gradient(165deg,
+        color.adjust($teal-9, $whiteness: 8%) 0%,
+        color.adjust($dark, $blackness: 4%) 72%,
+        color.adjust($dark-page, $blackness: 2%) 100%) !important;
+    border-right: 1px solid color.adjust($primary, $alpha: -0.55) !important;
+    font-family: inherit;
+  }
+
+  .app-drawer .q-list {
+    padding: 18px 12px;
+  }
+
+  .drawer-item {
+    min-height: 48px;
+    padding: 0 16px;
+    color: color.adjust($grey-4, $alpha: -0.08);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+  }
+
+  .drawer-item:hover {
+    background: color.adjust($secondary, $alpha: -0.82);
+    color: $grey-2;
+    transform: translateX(3px);
+  }
+
+  .drawer-item-active {
+    background: linear-gradient(90deg,
+        color.adjust($primary, $alpha: -0.08) 0%,
+        color.adjust($secondary, $alpha: -0.32) 100%) !important;
+    color: white !important;
+    box-shadow: inset 3px 0 0 $warning, 0 5px 14px color.adjust($dark, $alpha: -0.35);
+    font-weight: 700;
   }
 
 </style>
